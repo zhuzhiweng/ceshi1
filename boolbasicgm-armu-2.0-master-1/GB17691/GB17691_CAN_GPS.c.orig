@@ -1,0 +1,977 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "GB17691_CAN_GPS.h"
+#include "GPS_calculation.h"
+#include "CAN.h"
+#include "gps.h"
+
+#include "obd.h"
+#include "user_config.h"
+
+#include "UART.h"
+
+#include "sim_net.h"
+
+#include "define.h"
+
+//static const uint8_t device_type_manage[4]={DEVICE_TYPE0,DEVICE_TYPE1,DEVICE_TYPE2,DEVICE_TYPE3};
+//static const uint32_t ver_manage[64]={ VER0,VER1,VER2,VER3,VER4,VER5,VER6,VER7,VER8,VER9,VER10,VER11,VER12,VER13,VER14,VER15,
+//																			 VER16,VER17,VER18,VER19,VER20,VER21,VER22,VER23, VER24,VER25,VER26,VER27,VER28,VER29,VER30,VER31,
+//	                                     VER32,VER33,VER34,VER35,VER36,VER37,VER38,VER39, VER40,VER41,VER42,VER43,VER44,VER45,VER46,VER47,
+//	                                     VER48,VER49,VER50,VER51,VER52,VER53,VER54,VER55, VER56,VER57,VER58,VER59,VER60,VER61,VER62,VER63};
+
+//static const uint8_t device_type_manage[4]={DEVICE_TYPE0,DEVICE_TYPE1,DEVICE_TYPE2,DEVICE_TYPE3};
+//uint8_t vin_info[17] = {0x4C, 0x50, 0x48, 0x46, 0x41, 0x33, 0x42, 0x44, 0x30, 0x48, 0x59, 0x31, 0x37, 0x30, 0x32, 0x33, 0x38};    //vin信息
+static const uint32_t ver_manage[16]={VER0,VER1,VER2,VER3,VER4,VER5,VER6,VER7,VER8,VER9,VER10,VER11,VER12,VER13,VER14,VER15};																			 
+extern uint8_t vin_info[17];
+
+//obd_data_t obd_data_ORG={.obdDntPtc=0x00,
+//                                .MIL_state=0x01,
+//                                .dntSptStatus={.sptClst = 1,
+//																	             .sptHeatedclst=0,
+//																               .sptEprtsys=1,
+//																               .sptScdrairss=0,
+//																               .sptAcsysrfgr=1,
+//																               .sptEsgassens=0,
+//																               .sptEsgassenshter=1,
+//																               .sptEgrvvtsys=0,
+//																               .sptColdstartaid=1,
+//																               .sptBoostpresctrlsys=0,
+//																               .sptDpt=1,
+//																               .sptScrnox=0,
+//																               .sptNmhccvtnclst=1,
+//																               .sptMisfire=0,
+//																               .sptFuelsys=1,
+//																               .sptCphscpnt=1},
+//																.dntReadyStatus={.rdyClst=0,
+//																                 .rdyHeatedclst=1,
+//																                 .rdyEprtsys=0,
+//																                 .rdyScdrairss=1,
+//																                 .rdyAcsysrfgr=0,
+//																                 .rdyEsgassens=1,
+//																                 .rdyEsgassenshter=0,
+//																                 .rdyEgrvvtsys=1,
+//																                 .rdyColdstartaid=0,
+//																                 .rdyBoostpresctrlsys=1,
+//																                 .rdyDpt=0,
+//																                 .rdyScrnox=1,
+//																                 .rdyNmhccvtnclst=0,
+//																                 .rdyMisfire=1,
+//																                 .rdyFuelsys=0,
+//																                 .rdyCphscpnt=0},
+//																.VIN={0x4c,0x50,0x48,0x46,0x41,0x33,0x42,0x44,0x30,0x48,0x59,0x31,0x37,0x30,0x32,0x33,0x34},
+//																.softCbrtNum={0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x31,0x32,0x33,0x34,0x35,0x36,0x37,0x38,0x39},
+//																.CVN={0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x31,0x32,0x33,0x34,0x35,0x36,0x37,0x38,0x39},
+//																.iupr={.iuprOBDcond=0xaa55,
+//																       .iuprLgncntr=0xaa55,
+//																       .iuprHccatcomp=0xaa55, 
+//																       .iuprHccatcond=0xaa55,
+//																       .iuprNcatcomp=0xaa55,
+//																       .iuprNcatcond=0xaa55,
+//																       .iuprNadscomp=0xaa55,
+//																       .iuprNadscond=0xaa55,
+//																       .iuprPmcomp=0xaa55, 
+//																       .iuprPmcond=0xaa55,
+//																       .iuprEgscomp=0xaa55,
+//																       .iuprEgscond=0xaa55,
+//																       .iuprEgrcomp=0xaa55,
+//																       .iuprEgrcond=0xaa55,
+//																       .iuprBpcomp=0xaa55,
+//																       .iuprBpcond=0xaa55,
+//																       .iuprFuelcomp=0xaa55,
+//																       .iuprFuelcond=0xaa55},
+//																.faultCodeSum=0x03,
+//																.faultCodelist={0x6725,0x24BA,0xc7a8},		 
+//                               };
+
+//datastream_data_t datastream_data_ORG={.speed=0x55aa,                             //车速
+//                                       .atmoPres=0xc8,                            //大气压力
+//	                                     .engineTorq=0x2e,                          //发动机净输出扭矩
+//                                       .fricTorq =0x2c,                           //摩擦扭矩            
+//                                       .engineRev=0x1212,                         //发动机转速
+//                                       .enginefuelFlow=0xa0a8,                    //发动机燃料流量
+//                                       .upstSensValue=0xa88a,                    //SCR上游NOX传感器输出值
+//                                       .dnstSensValue=0x7a7a,                    //SCR下游NOx传感器输出值
+//                                       .reagAllowance=0x6b,                      //反应剂余量
+//	                                     .airInflow=0x6b5c,                        //进气量
+//                                       .inLetTemp=0x5c4d,                         //SCR入口温度
+//                                       .outLetTemp=0x4d3e,                        //SCR出口温度
+//	                                     .diffPres=0x3e2f,                          //DPF压差
+//	                                     .coolantTemp=0x2f,                         //发动机冷却液温度
+//	                                     .liquidLevel=0xc8,                         //油箱液位
+//	                                     .mileage=0x000011aa                       //累计里程数
+//                                      };																					 
+//custom_data_t custom_data_ORG={.datalen=0x0008,                         //自定义信息体长度
+//                                      .calcLoad=0x20,                        //计数负荷
+//                                      .DiffTemp=0x0100,                         //DPF后温
+//                                      .NOxInvertEff=0x55,                     //NOx转化效率
+//	                                    .elecCDISatus=0x01,                     //电加热点火状态
+//	                                    .fuleInjectSatus=0x01,                  //燃油喷射状态
+//	                                    .ASL=0x8cc8	                            //海拔
+//                               };
+
+//static void get_OBD_Info(obd_data_t *p)
+//{
+//  //p=&obd_data_ORG;                      //若进行地址的传递的话,则使用函数返回地址方式. return P;
+//	memcpy(p,&obd_data_ORG,sizeof(obd_data_t));
+//}
+//static void get_datastream_Info(datastream_data_t *p)
+//{
+//	//p=&datastream_data_ORG;
+//	memcpy(p,&datastream_data_ORG,sizeof(datastream_data_ORG));
+//}
+
+//static void get_custom_Info(custom_data_t *p)
+//{
+//  //p=&custom_data_ORG;
+//	memcpy(p,&custom_data_ORG,sizeof(custom_data_ORG));
+//}
+
+//static void get_OBD_Info(obd_data_t p)
+//{
+//  p=obd_data_ORG;
+//}
+//static void get_datastream_Info(datastream_data_t p)
+//{
+//	p=datastream_data_ORG;
+//}
+
+//static void get_custom_Info(custom_data_t p)
+//{
+//  p=custom_data_ORG;
+//}
+
+//void GB17691_get_OBD_Info(GB17691_obd_data_t *p_obd_data)
+//{ 
+//	uint8_t i;
+//	OBD_Vehicle_Infor_t  OBD_Vehicle_Infor_data;
+//	OBD_Diagnosis_Infor_t OBD_Diagnosis_Infor_data;
+
+//	get_OBD_Vehicle_Infor_t(&OBD_Vehicle_Infor_data);
+//	get_OBD_Diagnosis_Infor_t(&OBD_Diagnosis_Infor_data);
+
+//	 p_obd_data->obdDntPtc=OBD_Diagnosis_Infor_data.obdDntPtc;
+//   p_obd_data->MIL_state=OBD_Diagnosis_Infor_data.MIL_state;
+//   p_obd_data->dntSptStatus.sptClst = OBD_Diagnosis_Infor_data.dntSptStatus.sptClst;
+//	 p_obd_data->dntSptStatus.sptHeatedclst= OBD_Diagnosis_Infor_data.dntSptStatus.sptHeatedclst;
+//	 p_obd_data->dntSptStatus.sptEprtsys= OBD_Diagnosis_Infor_data.dntSptStatus.sptEprtsys;
+//	 p_obd_data->dntSptStatus.sptScdrairss= OBD_Diagnosis_Infor_data.dntSptStatus.sptScdrairss; 
+//	 p_obd_data->dntSptStatus.sptAcsysrfgr= OBD_Diagnosis_Infor_data.dntSptStatus.sptAcsysrfgr;
+//	 p_obd_data->dntSptStatus.sptEsgassens= OBD_Diagnosis_Infor_data.dntSptStatus.sptEsgassens;
+//	 p_obd_data->dntSptStatus.sptEsgassenshter= OBD_Diagnosis_Infor_data.dntSptStatus.sptEsgassenshter;
+//	 p_obd_data->dntSptStatus.sptEgrvvtsys= OBD_Diagnosis_Infor_data.dntSptStatus.sptEgrvvtsys;
+//	 p_obd_data->dntSptStatus.sptColdstartaid=OBD_Diagnosis_Infor_data.dntSptStatus.sptColdstartaid;
+//	 p_obd_data->dntSptStatus.sptBoostpresctrlsys= OBD_Diagnosis_Infor_data.dntSptStatus.sptBoostpresctrlsys;
+//	 p_obd_data->dntSptStatus.sptDpt= OBD_Diagnosis_Infor_data.dntSptStatus.sptDpt;
+//	 p_obd_data->dntSptStatus.sptScrnox=OBD_Diagnosis_Infor_data.dntSptStatus.sptScrnox;
+//	 p_obd_data->dntSptStatus.sptNmhccvtnclst= OBD_Diagnosis_Infor_data.dntSptStatus.sptNmhccvtnclst;
+//	 p_obd_data->dntSptStatus.sptMisfire= OBD_Diagnosis_Infor_data.dntSptStatus.sptMisfire;
+//	 p_obd_data->dntSptStatus.sptFuelsys= OBD_Diagnosis_Infor_data.dntSptStatus.sptFuelsys;
+//   p_obd_data->dntSptStatus.sptCphscpnt= OBD_Diagnosis_Infor_data.dntSptStatus.sptCphscpnt;
+//	 
+//   p_obd_data->dntReadyStatus.rdyClst= OBD_Diagnosis_Infor_data.dntReadyStatus.rdyClst;
+//   p_obd_data->dntReadyStatus.rdyHeatedclst= OBD_Diagnosis_Infor_data.dntReadyStatus.rdyHeatedclst;
+//	 p_obd_data->dntReadyStatus.rdyEprtsys= OBD_Diagnosis_Infor_data.dntReadyStatus.rdyEprtsys;
+//	 p_obd_data->dntReadyStatus.rdyScdrairss= OBD_Diagnosis_Infor_data.dntReadyStatus.rdyScdrairss;
+//   p_obd_data->dntReadyStatus.rdyAcsysrfgr= OBD_Diagnosis_Infor_data.dntReadyStatus.rdyAcsysrfgr;
+//   p_obd_data->dntReadyStatus.rdyEsgassens= OBD_Diagnosis_Infor_data.dntReadyStatus.rdyEsgassens;
+//	 p_obd_data->dntReadyStatus.rdyEsgassenshter= OBD_Diagnosis_Infor_data.dntReadyStatus.rdyEsgassenshter;
+//	 p_obd_data->dntReadyStatus.rdyEgrvvtsys=OBD_Diagnosis_Infor_data.dntReadyStatus.rdyEgrvvtsys;
+//	 p_obd_data->dntReadyStatus.rdyColdstartaid= OBD_Diagnosis_Infor_data.dntReadyStatus.rdyColdstartaid;
+//   p_obd_data->dntReadyStatus.rdyBoostpresctrlsys= OBD_Diagnosis_Infor_data.dntReadyStatus.rdyBoostpresctrlsys;
+//	 p_obd_data->dntReadyStatus.rdyDpt= OBD_Diagnosis_Infor_data.dntReadyStatus.rdyDpt;
+//	 p_obd_data->dntReadyStatus.rdyScrnox= OBD_Diagnosis_Infor_data.dntReadyStatus.rdyScrnox;
+//	 p_obd_data->dntReadyStatus.rdyNmhccvtnclst= OBD_Diagnosis_Infor_data.dntReadyStatus.rdyNmhccvtnclst;
+//	 p_obd_data->dntReadyStatus.rdyMisfire=OBD_Diagnosis_Infor_data.dntReadyStatus.rdyMisfire;
+//   p_obd_data->dntReadyStatus.rdyFuelsys=OBD_Diagnosis_Infor_data.dntReadyStatus.rdyFuelsys;
+//	 p_obd_data->dntReadyStatus.rdyCphscpnt= OBD_Diagnosis_Infor_data.dntReadyStatus.rdyCphscpnt;
+
+//   memcpy(p_obd_data->VIN,&OBD_Vehicle_Infor_data.VIN,17);
+//	 memcpy(p_obd_data->softCbrtNum,&OBD_Vehicle_Infor_data.softCbrtNum,18);
+//	 memcpy(p_obd_data->CVN,&OBD_Vehicle_Infor_data.CVN,18);
+//	 
+//   p_obd_data->iupr.iuprOBDcond=OBD_Diagnosis_Infor_data.iupr.iuprOBDcond;
+//   p_obd_data->iupr.iuprLgncntr=OBD_Diagnosis_Infor_data.iupr.iuprLgncntr;
+//	 p_obd_data->iupr.iuprHccatcomp=OBD_Diagnosis_Infor_data.iupr.iuprHccatcomp;
+//   p_obd_data->iupr.iuprHccatcond=OBD_Diagnosis_Infor_data.iupr.iuprHccatcond;
+//	 p_obd_data->iupr.iuprNcatcomp=OBD_Diagnosis_Infor_data.iupr.iuprNcatcomp;
+//   p_obd_data->iupr.iuprNcatcond=OBD_Diagnosis_Infor_data.iupr.iuprNcatcond;
+//	 p_obd_data->iupr.iuprNadscomp=OBD_Diagnosis_Infor_data.iupr.iuprNadscomp;
+//   p_obd_data->iupr.iuprNadscond=OBD_Diagnosis_Infor_data.iupr.iuprNadscond;
+//	 p_obd_data->iupr.iuprPmcomp=OBD_Diagnosis_Infor_data.iupr.iuprPmcomp;
+//   p_obd_data->iupr.iuprPmcond=OBD_Diagnosis_Infor_data.iupr.iuprPmcond;
+//	 p_obd_data->iupr.iuprEgscomp=OBD_Diagnosis_Infor_data.iupr.iuprEgscomp;
+//	 p_obd_data->iupr.iuprEgscond=OBD_Diagnosis_Infor_data.iupr.iuprEgscond;
+//   p_obd_data->iupr.iuprEgrcomp=OBD_Diagnosis_Infor_data.iupr.iuprEgrcomp;
+//	 p_obd_data->iupr.iuprEgrcond=OBD_Diagnosis_Infor_data.iupr.iuprEgrcond;
+//   p_obd_data->iupr.iuprBpcomp=OBD_Diagnosis_Infor_data.iupr.iuprBpcomp;
+//	 p_obd_data->iupr.iuprBpcond=OBD_Diagnosis_Infor_data.iupr.iuprBpcond;
+//   p_obd_data->iupr.iuprFuelcomp=OBD_Diagnosis_Infor_data.iupr.iuprFuelcomp;
+//	 p_obd_data->iupr.iuprFuelcond=OBD_Diagnosis_Infor_data.iupr.iuprFuelcond;
+//	 
+//	 if(OBD_Diagnosis_Infor_data.faultCodeSum==0xff){
+//			OBD_Diagnosis_Infor_data.faultCodeSum=0xfe;
+//	 }
+//	 p_obd_data->faultCodeSum=OBD_Diagnosis_Infor_data.faultCodeSum;	
+
+//   if(OBD_Diagnosis_Infor_data.faultCodeSum==0xfe){
+//			OBD_Diagnosis_Infor_data.faultCodeSum=0;
+//	 }
+//   for(i = 0; i < OBD_Diagnosis_Infor_data.faultCodeSum; i++)                                            //故障码信息
+//	  {
+//				 p_obd_data-> faultCode[i][0] = OBD_Diagnosis_Infor_data.faultCode[i][0];
+//				 p_obd_data-> faultCode[i][1] =OBD_Diagnosis_Infor_data.faultCode[i][1];
+//				 p_obd_data-> faultCode[i][2] = OBD_Diagnosis_Infor_data.faultCode[i][2];
+//				 p_obd_data-> faultCode[i][3] = OBD_Diagnosis_Infor_data.faultCode[i][3];
+//    }
+//}
+
+
+//void GB17691_get_datastream_Info(GB17691_datastream_data_t *p_datastream)
+//{
+//	OBD_Engine_Infor_t  datastream_OBD_Engine_Infor_data;
+//	OBD_Vehicle_Infor_t  datastream_OBD_Vehicle_Infor_data;
+//	OBD_Aftertreatment_Infor_t  datastream_OBD_Aftertreatment_Infor_data;
+//	
+//	get_OBD_Vehicle_Infor_t(&datastream_OBD_Vehicle_Infor_data);
+//	get_OBD_Engine_Infor_t(&datastream_OBD_Engine_Infor_data);
+//	get_OBD_Aftertreatment_Infor_t(&datastream_OBD_Aftertreatment_Infor_data);
+//	
+//	 p_datastream->speed = datastream_OBD_Vehicle_Infor_data.speed;
+//	 p_datastream->atmoPres = datastream_OBD_Engine_Infor_data.atmoPres;
+//	 p_datastream->engineTorq = datastream_OBD_Engine_Infor_data.engineTorq;
+//	 p_datastream->fricTorq = datastream_OBD_Engine_Infor_data.fricTorq;
+//	 p_datastream->engineRev = datastream_OBD_Engine_Infor_data.engineRev;
+//	 p_datastream->enginefuelFlow = datastream_OBD_Engine_Infor_data.enginefuelFlow;
+//	
+//	 p_datastream->upstSensValue =datastream_OBD_Aftertreatment_Infor_data.upstSensValue;
+//	 p_datastream->dnstSensValue =datastream_OBD_Aftertreatment_Infor_data.dnstSensValue;
+//	 p_datastream->reagAllowance = datastream_OBD_Aftertreatment_Infor_data.reagAllowance;
+//	
+//	 p_datastream->airInflow = datastream_OBD_Engine_Infor_data.airInflow;
+//	
+//	 p_datastream->inLetTemp = datastream_OBD_Aftertreatment_Infor_data.inLetTemp;
+//	 p_datastream->outLetTemp = datastream_OBD_Aftertreatment_Infor_data.outLetTemp;
+//	
+//	 p_datastream->diffPres = datastream_OBD_Aftertreatment_Infor_data.diffPres;
+//	 p_datastream->coolantTemp = datastream_OBD_Engine_Infor_data.coolantTemp;
+//	 p_datastream->liquidLevel = datastream_OBD_Vehicle_Infor_data.liquidLevel;
+//	 p_datastream->mileage =datastream_OBD_Vehicle_Infor_data.mileage;
+//	
+//	 GB17691_location_t location;
+//	 get_GB17691_gps_info(&location);
+//	 //(*p_datastream).locationStatus.EorW =location.status.EorW;
+//	 p_datastream->locationStatus.is_valid =location.status.is_valid;
+//	 p_datastream->locationStatus.NorS =location.status.NorS;
+//	 p_datastream->locationStatus.EorW =location.status.EorW;
+//	 
+//	 //p_datastream->Ing = location.longitude;
+//	 for(uint8_t i = 0; i < sizeof(location.longitude);i++)
+//		{
+//		   p_datastream->Ing[sizeof(location.longitude)- 1 - i] = location.longitude[sizeof(location.longitude)- 1 - i];
+//		}	 
+//	 //p_datastream->Lat = location.latitude;
+//		for(uint8_t i = 0; i < sizeof(location.latitude);i++)
+//		{
+//		   p_datastream->Lat[sizeof(location.latitude)- 1 - i] = location.latitude[sizeof(location.latitude)- 1 - i];
+//		}
+//}
+
+//void GB17691_get_custom_Info(GB17691_custom_data_t *p_custom_data)
+//{
+//	OBD_Engine_Infor_t custom_OBD_Engine_Infor_data;
+//	OBD_Aftertreatment_Infor_t  custom_OBD_Aftertreatment_Infor_data;
+//	
+//	get_OBD_Engine_Infor_t(&custom_OBD_Engine_Infor_data);
+//	get_OBD_Aftertreatment_Infor_t(&custom_OBD_Aftertreatment_Infor_data);
+//	
+//	p_custom_data->datalen=0x0a;                   //固定长度1+2+1+1+1+2+2
+//	p_custom_data->calcLoad=custom_OBD_Engine_Infor_data.calcLoad;
+//	p_custom_data->DiffTemp=custom_OBD_Aftertreatment_Infor_data.DiffTemp;
+//	p_custom_data->NOxInvertEff=custom_OBD_Aftertreatment_Infor_data.NOxInvertEff;
+//	p_custom_data->elecCDISatus=custom_OBD_Aftertreatment_Infor_data.elecCDISatus;
+//	p_custom_data->fuleInjectSatus=custom_OBD_Aftertreatment_Infor_data.fuleInjectSatus;
+//	p_custom_data->fuelrate=custom_OBD_Aftertreatment_Infor_data.fuelrate;
+//	
+//	gps_info_t cur_gps;
+//	get_gps_info(&cur_gps);
+//	p_custom_data->ASL=(uint16_t)(cur_gps.height)+500;  //浮点转整形
+//	
+//}
+
+uint16_t GB17691_get_OBD_Info(uint8_t *p_obd_data)
+{ 
+	uint8_t i;
+	uint8_t j;
+	uint8_t k;
+	uint16_t temp_len=0;
+	uint32_t temp;
+	
+//	p_obd_data[temp_len++] = 0; //SAEJ1939
+//	p_obd_data[temp_len++] = 1; //mil点亮
+//	//诊断支持状态
+//	p_obd_data[temp_len++] = 0x0f;
+//	p_obd_data[temp_len++] = 0xff;
+//	//诊断就绪状态
+//	p_obd_data[temp_len++] = 0x0f;
+//	p_obd_data[temp_len++] = 0xff;
+//	//车辆识别码
+//	GB17691_get_VIN_Info(&p_obd_data[temp_len]);
+//  temp_len  += 17;
+//	//软件标定状态
+//	for(i=0;i<18;i++)
+//	{
+//		p_obd_data[temp_len++] = '8';
+//	}
+//	//标定验证码
+//	for(i=0;i<18;i++)
+//	{
+//		p_obd_data[temp_len++] = '9';
+//	}
+//	//IUPR值
+//	temp = 300;
+//	for(i=0;i<36;i++)
+//	{
+//		p_obd_data[temp_len++] = '6';//(uint8_t)(temp>>8);
+//		//p_obd_data[temp_len++] = (uint8_t)(temp);
+//		temp++;
+//	}
+//	//故障码总数 0
+//	p_obd_data[temp_len++] = 1;
+//	p_obd_data[temp_len++] = 0x0a;
+//	p_obd_data[temp_len++] = 0x0b;
+//	p_obd_data[temp_len++] = 0x0c;
+//	p_obd_data[temp_len++] = 0x0d;
+		
+	OBD_Vehicle_Infor_t  OBD_Vehicle_Infor_data;
+	OBD_Diagnosis_Infor_t OBD_Diagnosis_Infor_data;
+
+	get_OBD_Vehicle_Infor_t(&OBD_Vehicle_Infor_data);
+	get_OBD_Diagnosis_Infor_t(&OBD_Diagnosis_Infor_data);
+
+//#ifdef debug
+//	uint8_t temp_buf[1];
+//	temp_buf[0]=OBD_Diagnosis_Infor_data.obdDntPtc;
+//	USARTSendOut(USART1, "GB17691_get_OBD_Info obdDntPtc:\r\n", 33);
+//	USARTSendOut(USART1, (const char *)temp_buf, 1);
+//	USARTSendOut(USART1, "\r\n", 2);
+//#endif
+	
+	 	if(OBD_Diagnosis_Infor_data.obdDntPtc==0x01){
+			//	OBD_Diagnosis_Infor_data.obdDntPtc=0x02;
+			 p_obd_data[temp_len]=0x02;
+		}else if((OBD_Diagnosis_Infor_data.obdDntPtc==0x02) || (OBD_Diagnosis_Infor_data.obdDntPtc==0x03)|| (OBD_Diagnosis_Infor_data.obdDntPtc==0x04) || (OBD_Diagnosis_Infor_data.obdDntPtc==0x05)){
+				//OBD_Diagnosis_Infor_data.obdDntPtc=0;
+			 p_obd_data[temp_len]=0;
+		}else if((OBD_Diagnosis_Infor_data.obdDntPtc==0xff) || (OBD_Diagnosis_Infor_data.obdDntPtc==0)){
+		    //OBD_Diagnosis_Infor_data.obdDntPtc=0xfe;
+			 p_obd_data[temp_len]=0xfe;
+		}else{
+		   // OBD_Diagnosis_Infor_data.obdDntPtc=0xfe;
+			 p_obd_data[temp_len]=0xfe;
+		}
+  // p_obd_data[temp_len]=OBD_Diagnosis_Infor_data.obdDntPtc;
+	 temp_len  += 1;
+	
+	 if(OBD_Diagnosis_Infor_data.MIL_state==0xff){
+			OBD_Diagnosis_Infor_data.MIL_state=0xfe;
+	 }
+	 
+	 if(OBD_Diagnosis_Infor_data.MIL_state==0xfe)
+	 OBD_Diagnosis_Infor_data.MIL_state=0x00;																//          上海实车对接修改
+   p_obd_data[temp_len]=OBD_Diagnosis_Infor_data.MIL_state;
+	 temp_len  += 1;
+	
+	/* 诊断支持状态高8位    */
+	 p_obd_data[temp_len] = OBD_Diagnosis_Infor_data.dntSptStatus.sptColdstartaid << 0 |      \
+	                        OBD_Diagnosis_Infor_data.dntSptStatus.sptBoostpresctrlsys << 1 |  \
+	                        OBD_Diagnosis_Infor_data.dntSptStatus.sptDpt<<2 |                 \
+	                        OBD_Diagnosis_Infor_data.dntSptStatus.sptScrnox <<3 |              \
+                          OBD_Diagnosis_Infor_data.dntSptStatus.sptNmhccvtnclst <<4|         \
+	                        OBD_Diagnosis_Infor_data.dntSptStatus.sptMisfire << 5 |             \
+	                        OBD_Diagnosis_Infor_data.dntSptStatus.sptFuelsys <<6 |    \
+													OBD_Diagnosis_Infor_data.dntSptStatus.sptCphscpnt << 7 ;
+	temp_len  += 1;
+	/* 诊断支持状态低8位    */
+   p_obd_data[temp_len] =  OBD_Diagnosis_Infor_data.dntSptStatus.sptClst << 0  |      \
+	                         OBD_Diagnosis_Infor_data.dntSptStatus.sptHeatedclst << 1 | \
+                           OBD_Diagnosis_Infor_data.dntSptStatus.sptEprtsys <<2 |     \
+	                         OBD_Diagnosis_Infor_data.dntSptStatus.sptScdrairss << 3 |  \
+													 OBD_Diagnosis_Infor_data.dntSptStatus.sptAcsysrfgr << 4 |  \
+	                         OBD_Diagnosis_Infor_data.dntSptStatus.sptEsgassens << 5 |  \
+	                         OBD_Diagnosis_Infor_data.dntSptStatus.sptEsgassenshter <<6 | \
+													 OBD_Diagnosis_Infor_data.dntSptStatus.sptEgrvvtsys << 7;
+	 temp_len  += 1; 
+	 if((p_obd_data[temp_len-2]==0xff)&&(p_obd_data[temp_len-1]==0xff)){
+	     p_obd_data[temp_len-2]=0;
+		   p_obd_data[temp_len-1]=0;
+	 }
+	 
+	 /* 诊断就绪状态高8位*/
+  p_obd_data[temp_len]= OBD_Diagnosis_Infor_data.dntReadyStatus.rdyColdstartaid << 0 |    \
+                         OBD_Diagnosis_Infor_data.dntReadyStatus.rdyBoostpresctrlsys <<1 | \
+	                       OBD_Diagnosis_Infor_data.dntReadyStatus.rdyDpt << 2 | \
+	                       OBD_Diagnosis_Infor_data.dntReadyStatus.rdyScrnox << 3 |\
+	                       OBD_Diagnosis_Infor_data.dntReadyStatus.rdyNmhccvtnclst<<4|\
+	                       OBD_Diagnosis_Infor_data.dntReadyStatus.rdyMisfire << 5 | \
+                         OBD_Diagnosis_Infor_data.dntReadyStatus.rdyFuelsys << 6 | \
+	                       OBD_Diagnosis_Infor_data.dntReadyStatus.rdyCphscpnt << 7 ;
+	temp_len  += 1;
+	/* 诊断就绪状态低8位*/
+  p_obd_data[temp_len]= OBD_Diagnosis_Infor_data.dntReadyStatus.rdyClst << 0 |      \
+                        OBD_Diagnosis_Infor_data.dntReadyStatus.rdyHeatedclst <<1 | \
+	                      OBD_Diagnosis_Infor_data.dntReadyStatus.rdyEprtsys << 2 |   \
+	                      OBD_Diagnosis_Infor_data.dntReadyStatus.rdyScdrairss << 3 | \
+                        OBD_Diagnosis_Infor_data.dntReadyStatus.rdyAcsysrfgr << 4 | \
+                        OBD_Diagnosis_Infor_data.dntReadyStatus.rdyEsgassens << 5 | \
+	                      OBD_Diagnosis_Infor_data.dntReadyStatus.rdyEsgassenshter << 6|\
+												OBD_Diagnosis_Infor_data.dntReadyStatus.rdyEgrvvtsys<<7;
+	temp_len  += 1;	
+	if((p_obd_data[temp_len-2]==0xff)&&(p_obd_data[temp_len-1]==0xff)){
+	     p_obd_data[temp_len-2]=0;
+		   p_obd_data[temp_len-1]=0;
+	 }
+	 
+
+//   memcpy(&p_obd_data[temp_len],&OBD_Vehicle_Infor_data.VIN,17);
+//	  //for(uint8_t i=0; i<17;i++){
+//		 for(i=0; i<17;i++){	
+//			if(p_obd_data[temp_len+i]!=0xff){
+//					break;
+//			}
+//	 }
+//	 if(i==17){
+//	   
+//		// memset(&p_obd_data[temp_len],0x30,17);
+//		 memset(p_obd_data+temp_len,0x30,17);
+//	 }
+	 
+	 GB17691_get_VIN_Info(&p_obd_data[temp_len]);
+	 temp_len  += 17;
+	 
+	 memcpy(&p_obd_data[temp_len],&OBD_Vehicle_Infor_data.softCbrtNum,18);
+	 for(j=0; j<18;j++){
+			if(p_obd_data[temp_len+j]!=0xff){
+					break;
+			}
+	 }
+	 if(j==18){
+	    //memset(&p_obd_data[temp_len],0x30,18);
+		 memset(p_obd_data+temp_len,0x2a,18);
+	 } 
+	 temp_len  += 18;
+	 
+	 judge_is_ASCII((char *)OBD_Vehicle_Infor_data.CVN,18);      //20190325_lycadd
+	 memcpy(&p_obd_data[temp_len],&OBD_Vehicle_Infor_data.CVN,18);    //CVN  
+	 for(k=0;k<18;k++){
+			if(p_obd_data[temp_len+k]!=0xff){
+					break;
+			}
+	 }
+	 if(k==18){
+	    //memset(&p_obd_data[temp_len],0x30,18);
+		 memset(p_obd_data+temp_len,0x30,18);
+	 } 
+	 temp_len  += 18;
+	 	 
+	 p_obd_data[temp_len] = (uint8_t)(OBD_Diagnosis_Infor_data.iupr.iuprOBDcond>> 8);                   
+	 p_obd_data[temp_len+1]= (uint8_t)OBD_Diagnosis_Infor_data.iupr.iuprOBDcond;
+	 temp_len  += 2;
+	 p_obd_data[temp_len] = (uint8_t)(OBD_Diagnosis_Infor_data.iupr.iuprLgncntr>> 8);                   
+	 p_obd_data[temp_len+1]= (uint8_t)OBD_Diagnosis_Infor_data.iupr.iuprLgncntr;
+	 temp_len  += 2;
+	 p_obd_data[temp_len] = (uint8_t)(OBD_Diagnosis_Infor_data.iupr.iuprHccatcomp>> 8);                   
+	 p_obd_data[temp_len+1]= (uint8_t)OBD_Diagnosis_Infor_data.iupr.iuprHccatcomp;
+	 temp_len  += 2;
+	 p_obd_data[temp_len] = (uint8_t)(OBD_Diagnosis_Infor_data.iupr.iuprHccatcond>> 8);                   
+	 p_obd_data[temp_len+1]= (uint8_t)OBD_Diagnosis_Infor_data.iupr.iuprHccatcond;
+	 temp_len  += 2;
+	 p_obd_data[temp_len] = (uint8_t)(OBD_Diagnosis_Infor_data.iupr.iuprNcatcomp>> 8);                   
+	 p_obd_data[temp_len+1]= (uint8_t)OBD_Diagnosis_Infor_data.iupr.iuprNcatcomp;
+	 temp_len  += 2;
+	 p_obd_data[temp_len] = (uint8_t)(OBD_Diagnosis_Infor_data.iupr.iuprNcatcond>> 8);                   
+	 p_obd_data[temp_len+1]= (uint8_t)OBD_Diagnosis_Infor_data.iupr.iuprNcatcond;
+	 temp_len  += 2;
+	 p_obd_data[temp_len] = (uint8_t)(OBD_Diagnosis_Infor_data.iupr.iuprNadscomp>> 8);                   
+	 p_obd_data[temp_len+1]= (uint8_t)OBD_Diagnosis_Infor_data.iupr.iuprNadscomp;
+	 temp_len  += 2;
+	 p_obd_data[temp_len] = (uint8_t)(OBD_Diagnosis_Infor_data.iupr.iuprNadscond>> 8);                   
+	 p_obd_data[temp_len+1]= (uint8_t)OBD_Diagnosis_Infor_data.iupr.iuprNadscond;
+	 temp_len  += 2;
+	 p_obd_data[temp_len] = (uint8_t)(OBD_Diagnosis_Infor_data.iupr.iuprPmcomp>> 8);                   
+	 p_obd_data[temp_len+1]= (uint8_t)OBD_Diagnosis_Infor_data.iupr.iuprPmcomp;
+	 temp_len  += 2;
+	 p_obd_data[temp_len] = (uint8_t)(OBD_Diagnosis_Infor_data.iupr.iuprPmcond>> 8);                   
+	 p_obd_data[temp_len+1]= (uint8_t)OBD_Diagnosis_Infor_data.iupr.iuprPmcond;
+	 temp_len  += 2;
+	 p_obd_data[temp_len] = (uint8_t)(OBD_Diagnosis_Infor_data.iupr.iuprEgscomp>> 8);                   
+	 p_obd_data[temp_len+1]= (uint8_t)OBD_Diagnosis_Infor_data.iupr.iuprEgscomp;
+	 temp_len  += 2;
+	 p_obd_data[temp_len] = (uint8_t)(OBD_Diagnosis_Infor_data.iupr.iuprEgscond>> 8);                   
+	 p_obd_data[temp_len+1]= (uint8_t)OBD_Diagnosis_Infor_data.iupr.iuprEgscond;
+	 temp_len  += 2;
+	 p_obd_data[temp_len] = (uint8_t)(OBD_Diagnosis_Infor_data.iupr.iuprEgrcomp>> 8);                   
+	 p_obd_data[temp_len+1]= (uint8_t)OBD_Diagnosis_Infor_data.iupr.iuprEgrcomp;
+	 temp_len  += 2;
+	 p_obd_data[temp_len] = (uint8_t)(OBD_Diagnosis_Infor_data.iupr.iuprEgrcond>> 8);                   
+	 p_obd_data[temp_len+1]= (uint8_t)OBD_Diagnosis_Infor_data.iupr.iuprEgrcond;
+	 temp_len  += 2;
+	 p_obd_data[temp_len] = (uint8_t)(OBD_Diagnosis_Infor_data.iupr.iuprBpcomp>> 8);                   
+	 p_obd_data[temp_len+1]= (uint8_t)OBD_Diagnosis_Infor_data.iupr.iuprBpcomp;
+	 temp_len  += 2;
+	 p_obd_data[temp_len] = (uint8_t)(OBD_Diagnosis_Infor_data.iupr.iuprBpcond>> 8);                   
+	 p_obd_data[temp_len+1]= (uint8_t)OBD_Diagnosis_Infor_data.iupr.iuprBpcond;
+	 temp_len  += 2;
+	 p_obd_data[temp_len] = (uint8_t)(OBD_Diagnosis_Infor_data.iupr.iuprFuelcomp>> 8);                   
+	 p_obd_data[temp_len+1]= (uint8_t)OBD_Diagnosis_Infor_data.iupr.iuprFuelcomp;
+	 temp_len  += 2;
+	 p_obd_data[temp_len] = (uint8_t)(OBD_Diagnosis_Infor_data.iupr.iuprFuelcond>> 8);                   
+	 p_obd_data[temp_len+1]= (uint8_t)OBD_Diagnosis_Infor_data.iupr.iuprFuelcond;
+	 temp_len  += 2;
+	 
+   	 
+	 if(OBD_Diagnosis_Infor_data.faultCodeSum==0xff){
+			OBD_Diagnosis_Infor_data.faultCodeSum=0xfe;
+	 }
+	 
+   if(OBD_Diagnosis_Infor_data.faultCodeSum==0xfe){
+			OBD_Diagnosis_Infor_data.faultCodeSum=0;
+	 }
+	 
+	 p_obd_data[temp_len]=OBD_Diagnosis_Infor_data.faultCodeSum;	
+   temp_len  += 1;
+	 
+//   if(OBD_Diagnosis_Infor_data.faultCodeSum==0xfe){
+//			OBD_Diagnosis_Infor_data.faultCodeSum=0;
+//	 }
+   for(i = 0; i < OBD_Diagnosis_Infor_data.faultCodeSum; i++)                                            //故障码信息
+	  {
+				 p_obd_data[temp_len++] = OBD_Diagnosis_Infor_data.faultCode[i][0];
+				 p_obd_data[temp_len++] =OBD_Diagnosis_Infor_data.faultCode[i][1];
+				 p_obd_data[temp_len++] = OBD_Diagnosis_Infor_data.faultCode[i][2];
+				 p_obd_data[temp_len++] = OBD_Diagnosis_Infor_data.faultCode[i][3];
+    }
+		
+		return temp_len;
+}
+
+uint16_t GB17691_get_datastream_Info(uint8_t  *p_datastream)
+{
+	uint16_t temp_len=0;
+	
+//	uint32_t temp;
+//	
+//	//车速
+//	temp = 60*256;  //60km/h
+//	p_datastream[temp_len++] = (uint8_t)(temp>>8);
+//	p_datastream[temp_len++] = (uint8_t)(temp);
+//	//大气压力
+//	temp = 200; //100kPa
+//	p_datastream[temp_len++] = (uint8_t)(temp);
+//	//发动机净输出扭矩
+//	temp = 65;  //65%
+//	p_datastream[temp_len++] = (uint8_t)(temp);
+//	//摩擦扭矩
+//	temp = 21;  //21%
+//	p_datastream[temp_len++] = (uint8_t)(temp);
+//	//发动机转速
+//	temp = 835*1000/125; //835rpm
+//	p_datastream[temp_len++] = (uint8_t)(temp>>8);
+//	p_datastream[temp_len++] = (uint8_t)(temp);
+//	//发动机燃料流量
+//	temp = 200*100/5; //200L/h
+//	p_datastream[temp_len++] = (uint8_t)(temp>>8);
+//	p_datastream[temp_len++] = (uint8_t)(temp);
+//	//SCR上游NOX传感器输出值
+//	temp = (128) *100/5; //128ppm
+//	p_datastream[temp_len++] = (uint8_t)(temp>>8);
+//	p_datastream[temp_len++] = (uint8_t)(temp);
+//	//SCR下游NOX传感器输出值
+//	temp = (120)*100/5; //120ppm
+//	p_datastream[temp_len++] = (uint8_t)(temp>>8);
+//	p_datastream[temp_len++] = (uint8_t)(temp);
+//	//反应剂余量
+//	temp = 36*10/4; //36%
+//	p_datastream[temp_len++] = (uint8_t)(temp);
+//	//进气量
+//	temp = 24*100/5;  //24kg/h
+//	p_datastream[temp_len++] = (uint8_t)(temp>>8);
+//	p_datastream[temp_len++] = (uint8_t)(temp);
+//	//SCR入口温度
+//	temp = (315)*100000/3125; //315度
+//	p_datastream[temp_len++] = (uint8_t)(temp>>8);
+//	p_datastream[temp_len++] = (uint8_t)(temp);
+//	//SCR出口温度
+//	temp = (300)*100000/3125; //300度
+//	p_datastream[temp_len++] = (uint8_t)(temp>>8);
+//	p_datastream[temp_len++] = (uint8_t)(temp);
+//	//DPF压差
+//	temp = 10*10; //10kPa
+//	p_datastream[temp_len++] = (uint8_t)(temp>>8);
+//	p_datastream[temp_len++] = (uint8_t)(temp);
+//	//发动机冷却液温度
+//	temp = 25;  //25度
+//	p_datastream[temp_len++] = (uint8_t)(temp);
+//	//油箱液位
+//	temp = 60*10/4; //60%
+//	p_datastream[temp_len++] = (uint8_t)(temp);
+	
+	
+	
+	OBD_Engine_Infor_t  datastream_OBD_Engine_Infor_data;
+	OBD_Vehicle_Infor_t  datastream_OBD_Vehicle_Infor_data;
+	OBD_Aftertreatment_Infor_t  datastream_OBD_Aftertreatment_Infor_data;
+	
+	get_OBD_Vehicle_Infor_t(&datastream_OBD_Vehicle_Infor_data);
+	get_OBD_Engine_Infor_t(&datastream_OBD_Engine_Infor_data);
+	get_OBD_Aftertreatment_Infor_t(&datastream_OBD_Aftertreatment_Infor_data);
+	
+	 p_datastream[temp_len]= (uint8_t)(datastream_OBD_Vehicle_Infor_data.speed>>8);
+	 p_datastream[temp_len+1]= (uint8_t)datastream_OBD_Vehicle_Infor_data.speed;
+	 temp_len  += 2;
+	
+	 p_datastream[temp_len] = datastream_OBD_Engine_Infor_data.atmoPres;
+   temp_len +=1;
+	 
+		if(datastream_OBD_Engine_Infor_data.engineTorq!=0xff)
+	 p_datastream[temp_len]= datastream_OBD_Engine_Infor_data.engineTorq;
+		else
+		 p_datastream[temp_len]= datastream_OBD_Engine_Infor_data.engineTorq;	
+	 temp_len +=1;
+	
+		if(datastream_OBD_Engine_Infor_data.fricTorq!=0xff)
+	 p_datastream[temp_len] = datastream_OBD_Engine_Infor_data.fricTorq;
+		else
+		p_datastream[temp_len] = datastream_OBD_Engine_Infor_data.fricTorq;	 //修改为发动机扭矩
+	 temp_len +=1;
+	 
+	 p_datastream[temp_len]=(uint8_t) (datastream_OBD_Engine_Infor_data.engineRev >>8) ;
+	 p_datastream[temp_len+1]= datastream_OBD_Engine_Infor_data.engineRev;
+	 temp_len  += 2;
+	 
+	 p_datastream[temp_len]= (uint8_t) (datastream_OBD_Engine_Infor_data.enginefuelFlow>>8);
+	 p_datastream[temp_len+1]= datastream_OBD_Engine_Infor_data.enginefuelFlow;
+	 temp_len  += 2;
+	 
+	 
+	 if(datastream_OBD_Aftertreatment_Infor_data.upstSensValue!=0xffff)
+	 {
+	 p_datastream[temp_len] = (uint8_t)((datastream_OBD_Aftertreatment_Infor_data.upstSensValue)>>8);
+	 p_datastream[temp_len+1] =(datastream_OBD_Aftertreatment_Infor_data.upstSensValue);
+	 }
+	 else
+	 {
+	 p_datastream[temp_len] = (uint8_t)((datastream_OBD_Aftertreatment_Infor_data.upstSensValue)>>8);
+	 p_datastream[temp_len+1] =(datastream_OBD_Aftertreatment_Infor_data.upstSensValue);	 
+	 }
+	 temp_len  += 2;
+	 
+	 
+	 
+	 if(datastream_OBD_Aftertreatment_Infor_data.dnstSensValue!=0xffff)
+	 {
+	  p_datastream[temp_len] =(uint8_t)((datastream_OBD_Aftertreatment_Infor_data.dnstSensValue)>>8);
+	  p_datastream[temp_len+1] =(datastream_OBD_Aftertreatment_Infor_data.dnstSensValue);
+	 }
+	 else
+	 {
+	  p_datastream[temp_len] =(uint8_t)((datastream_OBD_Aftertreatment_Infor_data.dnstSensValue)>>8);
+	  p_datastream[temp_len+1] =(datastream_OBD_Aftertreatment_Infor_data.dnstSensValue);	 
+	 }
+	 
+	 
+		 temp_len  += 2;
+		 
+	  p_datastream[temp_len] = datastream_OBD_Aftertreatment_Infor_data.reagAllowance;
+	  temp_len +=1;
+		
+	 p_datastream[temp_len]= (uint8_t)(datastream_OBD_Engine_Infor_data.airInflow>>8);
+	 p_datastream[temp_len+1]=(uint8_t) datastream_OBD_Engine_Infor_data.airInflow;
+	 temp_len  += 2;
+			
+	 
+	 
+	 if(datastream_OBD_Aftertreatment_Infor_data.inLetTemp!=0xffff)
+	 {
+	p_datastream[temp_len] = (uint8_t)((datastream_OBD_Aftertreatment_Infor_data.inLetTemp)>>8); //8=
+	p_datastream[temp_len+1] =(uint8_t) (datastream_OBD_Aftertreatment_Infor_data.inLetTemp);
+	 }
+	 else
+	 {
+	 	p_datastream[temp_len] = (uint8_t)((datastream_OBD_Aftertreatment_Infor_data.inLetTemp)>>8); //8=
+  	p_datastream[temp_len+1] =(uint8_t) (datastream_OBD_Aftertreatment_Infor_data.inLetTemp);
+	 }
+	 
+		 temp_len  += 2;
+	
+	 
+	 if( datastream_OBD_Aftertreatment_Infor_data.outLetTemp!=0xffff)
+	 {
+	 p_datastream[temp_len] = (uint8_t)((datastream_OBD_Aftertreatment_Infor_data.outLetTemp)>>8); //
+	 p_datastream[temp_len+1] =(uint8_t)( datastream_OBD_Aftertreatment_Infor_data.outLetTemp);
+	 }
+	 else
+	 {
+	 p_datastream[temp_len] = (uint8_t)((datastream_OBD_Aftertreatment_Infor_data.outLetTemp)>>8); //
+	 p_datastream[temp_len+1] =(uint8_t)( datastream_OBD_Aftertreatment_Infor_data.outLetTemp);	 
+	 
+	 }
+	 temp_len  += 2;
+	 
+	 //------------------------------------ 
+	p_datastream[temp_len]= (uint8_t)(datastream_OBD_Aftertreatment_Infor_data.diffPres>>8);
+	p_datastream[temp_len+1]=(uint8_t) datastream_OBD_Aftertreatment_Infor_data.diffPres;
+	temp_len  += 2;
+	
+	 p_datastream[temp_len] = datastream_OBD_Engine_Infor_data.coolantTemp;
+	 temp_len +=1;
+	 
+	 p_datastream[temp_len] = datastream_OBD_Vehicle_Infor_data.liquidLevel;
+	 temp_len +=1;
+	 
+	 GB17691_location_t location;
+	 get_GB17691_gps_info(&location);
+	 
+
+	 
+	 p_datastream[temp_len] = (uint8_t)(location.status.is_valid) | ((uint8_t)location.status.NorS<<2) | ((uint8_t)location.status.EorW<<3)  ;
+	 temp_len +=1;
+	 
+	 
+    memcpy(&p_datastream[temp_len],&location.longitude,4);                                            //经度
+		temp_len += 4;
+		memcpy(&p_datastream[temp_len],&location.latitude,4);                                             //纬度
+		temp_len += 4;
+		
+/*下面代码GPS经纬度高位在前 , 有问题    */	 
+//	 for(uint8_t i = 0; i < sizeof(location.longitude);i++)
+//		{
+//		   //p_datastream->Ing[sizeof(location.longitude)- 1 - i] = location.longitude[sizeof(location.longitude)- 1 - i];
+//			 p_datastream[temp_len++] = location.longitude[sizeof(location.longitude)- 1 - i]; 
+//			
+//		}	  
+//		for(uint8_t i = 0; i < sizeof(location.latitude);i++)
+//		{
+//		   //p_datastream->Lat[sizeof(location.latitude)- 1 - i] = location.latitude[sizeof(location.latitude)- 1 - i];
+//			 p_datastream[temp_len++] = location.latitude[sizeof(location.latitude)- 1 - i];; 
+//		}
+//		
+	 p_datastream[temp_len++] =(uint8_t)(datastream_OBD_Vehicle_Infor_data.mileage>>24);
+	 p_datastream[temp_len++] =(uint8_t)(datastream_OBD_Vehicle_Infor_data.mileage>>16);
+	 p_datastream[temp_len++] =(uint8_t)(datastream_OBD_Vehicle_Infor_data.mileage>>8);
+	 p_datastream[temp_len++] =(uint8_t)datastream_OBD_Vehicle_Infor_data.mileage;
+
+// //累计里程
+//  temp = 25000*10;  //25000KM
+// 	p_datastream[temp_len++] = (uint8_t)(temp>>24);
+//	p_datastream[temp_len++] = (uint8_t)(temp>>16);
+//	p_datastream[temp_len++] = (uint8_t)(temp>>8);
+//	p_datastream[temp_len++] = (uint8_t)(temp);
+		
+	 return temp_len;	
+}
+
+uint16_t GB17691_get_custom_Info(uint8_t *p_custom_data)
+{
+	uint16_t temp_len=0;
+	uint32_t temp = 0;
+	
+	OBD_Engine_Infor_t custom_OBD_Engine_Infor_data;
+	OBD_Aftertreatment_Infor_t  custom_OBD_Aftertreatment_Infor_data;
+//	
+	get_OBD_Engine_Infor_t(&custom_OBD_Engine_Infor_data);
+	get_OBD_Aftertreatment_Infor_t(&custom_OBD_Aftertreatment_Infor_data);
+	
+//	p_custom_data[temp_len]=(uint8_t)(0x000c>>8);                   //固定长度0x000c : 2+1+2+1+1+1+2+2
+//	p_custom_data[temp_len+1]=(uint8_t)(0x000c);
+//	temp_len +=2;
+//	
+//	p_custom_data[temp_len]=custom_OBD_Engine_Infor_data.calcLoad;
+//	temp_len +=1;
+//	
+//	p_custom_data[temp_len]=(uint8_t)(custom_OBD_Aftertreatment_Infor_data.DiffTemp>>8);
+//	p_custom_data[temp_len+1]=(uint8_t)custom_OBD_Aftertreatment_Infor_data.DiffTemp;
+//	temp_len +=2;
+//	
+//	p_custom_data[temp_len]=custom_OBD_Aftertreatment_Infor_data.NOxInvertEff;
+//	temp_len +=1;
+//	
+//	p_custom_data[temp_len]=custom_OBD_Aftertreatment_Infor_data.elecCDISatus;
+//	temp_len +=1;
+//	
+//	p_custom_data[temp_len]=custom_OBD_Aftertreatment_Infor_data.fuleInjectSatus;
+//	temp_len +=1;
+//	
+//	gps_info_t cur_gps;
+//	get_gps_info(&cur_gps);
+//	p_custom_data[temp_len]=(uint8_t)(((uint16_t)(cur_gps.height)+500)>>8);  //浮点转整形
+//	p_custom_data[temp_len+1]= (uint8_t)((uint16_t)(cur_gps.height)+500);
+//	temp_len +=2;
+//	
+//	p_custom_data[temp_len]=(uint8_t)(custom_OBD_Aftertreatment_Infor_data.fuelrate>>8);
+//	p_custom_data[temp_len+1]=(uint8_t)custom_OBD_Aftertreatment_Infor_data.fuelrate;
+//	temp_len +=2;
+//	
+//	//发动机扭矩模式
+	p_custom_data[temp_len++] = 0x01; //转速控制
+	//油门踏板
+	p_custom_data[temp_len++] = custom_OBD_Engine_Infor_data.position_pedal; //40%
+	//累计油耗
+	p_custom_data[temp_len++] = (uint8_t)(custom_OBD_Engine_Infor_data.totalfuel>>24);
+	p_custom_data[temp_len++] = (uint8_t)(custom_OBD_Engine_Infor_data.totalfuel>>16);
+	p_custom_data[temp_len++] = (uint8_t)(custom_OBD_Engine_Infor_data.totalfuel>>8);
+	p_custom_data[temp_len++] = (uint8_t)(custom_OBD_Engine_Infor_data.totalfuel); 
+	//尿素箱温度
+	if( custom_OBD_Aftertreatment_Infor_data.CatalystTemp!=0xff)
+	p_custom_data[temp_len++] = custom_OBD_Aftertreatment_Infor_data.CatalystTemp; //30度																		/// ------------ce shi	
+	else
+	p_custom_data[temp_len++] =0xff;	
+	//实际尿素喷射量
+	if(custom_OBD_Aftertreatment_Infor_data.DosingReag!=0xffffffff)
+	{
+		temp=custom_OBD_Aftertreatment_Infor_data.DosingReag*300/8;
+		p_custom_data[temp_len++] = (uint8_t)(temp>>24);
+		p_custom_data[temp_len++] = (uint8_t)(temp>>16);
+		p_custom_data[temp_len++] = (uint8_t)(temp>>8);
+		p_custom_data[temp_len++] = (uint8_t)(temp);
+	}
+	else
+	{	
+		p_custom_data[temp_len++] = 0xff;
+		p_custom_data[temp_len++] = 0xff;
+		p_custom_data[temp_len++] = 0xff;
+		p_custom_data[temp_len++] = 0xff;
+	}
+	//累计尿素消耗
+	if(custom_OBD_Aftertreatment_Infor_data.TotalReagCom!=0xffffffff)
+	{
+		temp=custom_OBD_Aftertreatment_Infor_data.TotalReagCom/10;
+		p_custom_data[temp_len++] = (uint8_t)(temp>>24);
+		p_custom_data[temp_len++] = (uint8_t)(temp>>16);
+		p_custom_data[temp_len++] = (uint8_t)(temp>>8);
+		p_custom_data[temp_len++] = (uint8_t)(temp);	
+	}
+	else
+	{
+		p_custom_data[temp_len++] = 0xff;
+		p_custom_data[temp_len++] = 0xff;
+		p_custom_data[temp_len++] = 0xff;
+		p_custom_data[temp_len++] = 0xff;
+	}
+	//DPF排气温度
+	if(custom_OBD_Aftertreatment_Infor_data.DiffTemp!=0xffff)
+	{
+	temp = (custom_OBD_Aftertreatment_Infor_data.DiffTemp-400)/10*32; //300度
+	p_custom_data[temp_len++] = (uint8_t)((temp)>>8);
+	p_custom_data[temp_len++] = (uint8_t)(temp);
+	}
+	else
+	{
+		p_custom_data[temp_len++] = 0xff;
+		p_custom_data[temp_len++] = 0xff;
+	}
+	return temp_len;
+}
+
+uint16_t GB17691_get_VIN_Info(uint8_t *p_VIN_Info)
+{
+   uint16_t temp_len=0;
+	 // uint8_t vin_info[17] = {0x4C, 0x50, 0x48, 0x46, 0x41, 0x33, 0x42, 0x44, 0x30, 0x48, 0x59, 0x31, 0x37, 0x30, 0x32, 0x33, 0x38};    //vin信息
+//	 memcpy(&p_VIN_Info[temp_len],vin_info,sizeof(vin_info));
+	 
+OBD_Vehicle_Infor_t  VIN_OBD_Vehicle_Infor_data;
+get_OBD_Vehicle_Infor_t(&VIN_OBD_Vehicle_Infor_data);	 
+//memcpy(&p_VIN_Info[temp_len],&VIN_OBD_Vehicle_Infor_data.VIN,17);
+//memcpy(vin_info,&VIN_OBD_Vehicle_Infor_data.VIN,17);
+	
+	if(	(vin_info[0]==0)||(vin_info[0]==0xff)	)
+	{		
+		memcpy(&p_VIN_Info[temp_len],&VIN_OBD_Vehicle_Infor_data.VIN,17);
+	  temp_len  += 17;
+	}
+	else
+	{
+		memcpy(&p_VIN_Info[temp_len],vin_info,sizeof(vin_info));
+		temp_len  += 17;	
+	}
+	
+	
+	
+	 return temp_len;
+}
+
+uint8_t GB17691_get_softver_Info(void)
+{
+	 // char device_type_buf[15];
+   // uint8_t m=0;
+	 // uint8_t n=0;
+	  uint8_t device_type=0;
+	  uint8_t fw_ver=0; 
+	  uint8_t soft_ver=0;
+	
+//	  memcpy(device_type_buf,__DEVICE_TYPE,strlen(__DEVICE_TYPE));
+//	  m=atoi(&device_type_buf[13]);
+//  		for(m=0; m<4;m++){
+//		  if(CURRENT_DEVICE_TYPE==device_type_manage[m])
+//		   	{
+//			    break;
+//			  }
+//		}
+	
+//		for(n=0; n<16;n++)
+//		{
+//			if(CURRENT_VER==ver_manage[n])
+//			{
+//			   break;
+//			}
+//		}
+
+//	  soft_ver= ((m&0x0f)<<4)|(n&0x0f);
+//
+
+	char device_name[32] = {0};
+//  uint8_t i;
+  memcpy(device_name,__DEVICE_TYPE,strlen(__DEVICE_TYPE));
+  for(uint8_t i=0;i<strlen(__DEVICE_TYPE);i++)
+  {
+    if(device_name[0]=='_')
+    {
+      for(uint8_t j=0;j<strlen(__DEVICE_TYPE)-i;j++)
+      {
+        device_name[j] = device_name[j+1];
+      }
+      break;
+    }
+    
+    for(uint8_t j=0;j<strlen(__DEVICE_TYPE)-i;j++)
+    {
+      device_name[j] = device_name[j+1];
+    }
+  }
+  
+  int temp,res;
+  res = sscanf(device_name,"%d",&temp);
+  if(res==1)
+  {
+    device_type = temp;
+  }
+  else
+  {
+    device_type = 0;
+  }  
+  if(device_type > 15)
+  {
+    device_type = 0;
+  }
+	
+	 for(fw_ver = 0; fw_ver < (sizeof(ver_manage)/sizeof(uint32_t)); fw_ver++)
+  {
+    if(CURRENT_VER==ver_manage[fw_ver])
+    {
+      break;
+    }
+  }
+		
+		soft_ver= ((device_type&0x0f)<<4)|(fw_ver&0x0f);
+		return soft_ver;
+}

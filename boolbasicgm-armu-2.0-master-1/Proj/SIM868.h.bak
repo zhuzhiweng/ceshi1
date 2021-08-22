@@ -1,0 +1,12 @@
+
+
+#include "stm32f10x.h"
+
+
+void SIM868_POWERON(void);
+void SIM868_POWEROFF(void);
+void SIM868_RESET(void);
+void SIM868_start(void);
+void SIM868_login(void);
+void SIM868_retry_connect(void);
+

@@ -1,0 +1,157 @@
+#include "includes.h"
+#include "spi_flash.h"
+
+//extern uint8_t gps_rx_buf[GSP_RX_BUF_SIZE];
+//extern uint16_t gps_rx_buf_wr_pos;
+//extern uint16_t gps_rx_buf_rd_pos;
+
+//uint8_t gps_rx_buf[GSP_RX_BUF_SIZE];
+//uint16_t gps_rx_buf_wr_pos = 0;
+//uint16_t gps_rx_buf_rd_pos = 0;
+
+void USART_Sendbyte(USART_TypeDef* USARTx, u8 Data)
+{
+	USART_SendData(USARTx,Data);
+	while(USART_GetFlagStatus(USARTx, USART_FLAG_TXE) == RESET){}; 		
+}
+
+//void USARTSendOut(USART_TypeDef* USARTx,const char *buf, u8 len)	
+
+void USARTSendOut(USART_TypeDef* USARTx, const char *buf, u16 len)			
+{
+	unsigned char i;	
+
+	for(i = 0; i < len; i++) 
+	{
+		USART_SendData(USARTx, *buf++); 	                                  //将接收到的数据发送到上位机
+    while(USART_GetFlagStatus(USARTx, USART_FLAG_TXE) == RESET){}; 		//	等待数据移送到移位寄存器
+	}
+
+}
+
+//void SIM7600_USART_IRQHandler(void)
+//{
+//	  
+
+//			if(USART_GetFlagStatus(SIM7600_USART, USART_FLAG_ORE) != RESET)//串口接收溢出
+//	{
+//			USART_ReceiveData(SIM7600_USART);
+//			USART_ClearFlag(SIM7600_USART,USART_FLAG_ORE);		
+//	}	
+//	
+
+//	if(USART_GetITStatus(SIM7600_USART, USART_IT_RXNE) != RESET)//接收中断
+//	{
+//		
+////			if(SIM868_RX>=SIM868RXBUF_SIZE-1)
+////			{													
+////			SIM868_RX=0;	
+////			}
+////			SIM868_RXBUF[SIM868_RX++]=USART_ReceiveData(SIM7600_USART);
+////		
+//		SIM868_RXBUF[rx_write_pos]=USART_ReceiveData(SIM7600_USART);
+//		rx_write_pos++;
+//		if(rx_write_pos >= SIM868RXBUF_SIZE)
+//		{
+//			rx_write_pos = 0;
+//		}	
+//		
+//	}	
+//	
+//}
+#define  CONSOLE_MAX   40
+
+
+u8 consoleBuf[CONSOLE_MAX];
+u8 consoleCnt=0;
+int a,b,c,d;
+
+
+uint8_t RS232_REBUF[100];		//上海VIN新加
+uint8_t RX_RS232_REBUF=0;//上海VIN新加
+uint8_t vin_info[17]={0};//上海VIN新加
+uint8_t flag_set_vin=0;//上海VIN新加
+
+
+void RS232_USART_IRQHandler(void)
+{
+
+//			if(USART_GetFlagStatus(KL327_USART, USART_FLAG_ORE) != RESET)//串口接收溢出
+//	{
+//			USART_ReceiveData(KL327_USART);
+//			USART_ClearFlag(KL327_USART,USART_FLAG_ORE);		
+//	}	
+	u8 data=0;
+	
+	if(USART_GetITStatus(KL327_USART, USART_IT_RXNE) != RESET)//接收中断
+	{
+		data=
+		consoleBuf[consoleCnt++]=USART_ReceiveData(USART3);
+		if(consoleCnt>=CONSOLE_MAX)
+			consoleCnt=0;
+	}
+	if(data=='\r')
+	{		
+		char* p=strstr((char*)consoleBuf,"SET:");
+		if(p)
+		{
+			sscanf(p,"SET:%d,%d,%d,%d",&a,&b,&c,&d);
+			SetUdsPara(a,b,c,d);
+			memset(consoleBuf,0,CONSOLE_MAX);
+			consoleCnt=0;
+			char buf[20]={0};
+			USARTSendOut(USART3, "SETTING....!\r\n", strlen("SETTING....!\r\n"));
+			snprintf(buf,20,"pro:%d\r\n",a);
+			USARTSendOut(USART3, buf, 20);
+			memset(buf,0,20);
+			snprintf(buf,20,"udsId:%d\r\n",b);
+			USARTSendOut(USART3, buf, 20);
+			memset(buf,0,20);
+			snprintf(buf,20,"needCompare:%d\r\n",c);
+			USARTSendOut(USART3, buf, 20);
+			memset(buf,0,20);
+			snprintf(buf,20,"mode:%d\r\n",d);
+			USARTSendOut(USART3, buf, 20);
+			memset(buf,0,20);
+			USARTSendOut(USART3, "SET OK PLEASE RESTART!\r\n", strlen("SET OK PLEASE RESTART!\r\n"));
+		}
+	}
+		if(USART_GetITStatus(KL327_USART, USART_IT_IDLE) != RESET)//接收中断
+	{
+		USART_ReceiveData(USART3);
+		USART_ClearFlag(KL327_USART,USART_FLAG_IDLE);
+		if(RX_RS232_REBUF>=23)
+		{
+			for(u8 i=0;i<RX_RS232_REBUF;i++)
+			{
+					if(	(RS232_REBUF[i]=='V')&&(RS232_REBUF[i+1]=='I')&&(RS232_REBUF[i+2]=='N')	)
+					{
+						if(	(RS232_REBUF[i+21]==0x0d)&&(RS232_REBUF[i+22]==0x0a) )
+						{
+							u8 j=0;
+								for(j=0;j<17;j++)
+							{						
+								if(!((RS232_REBUF[j+4] >= 0x30 && RS232_REBUF[j+4] <= 0x39) || (RS232_REBUF[j+4]>= 0x41 &&RS232_REBUF[j+4] <= 0x5a) || (RS232_REBUF[j+4] >= 0x61 && RS232_REBUF[j+4] <= 0x7a)))
+								break;							
+							}
+							if(j==17)
+							{
+								memcpy(vin_info,&RS232_REBUF[i+4],17);
+								USARTSendOut(USART3,"OK\r\n",4);	
+								flag_set_vin=1;
+							}													
+								RX_RS232_REBUF=0;
+								break;
+							
+						}
+					}
+			}
+		
+		}
+		RX_RS232_REBUF=0;
+	
+	}
+}
+
+
+

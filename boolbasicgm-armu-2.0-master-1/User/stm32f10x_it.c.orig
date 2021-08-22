@@ -1,0 +1,380 @@
+/**
+  ******************************************************************************
+  * @file    EXTI/stm32f10x_it.c 
+  * @author  MCD Application Team
+  * @version V3.3.0
+  * @date    04/16/2010
+  * @brief   Main Interrupt Service Routines.
+  *          This file provides template for all exceptions handler and peripherals
+  *          interrupt service routine.
+  ******************************************************************************
+  * @copy
+  *
+  * THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
+  * WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE
+  * TIME. AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY
+  * DIRECT, INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING
+  * FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE
+  * CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
+  *
+  * <h2><center>&copy; COPYRIGHT 2010 STMicroelectronics</center></h2>
+  */
+
+/* Includes ------------------------------------------------------------------*/
+#include "includes.h"
+/** @addtogroup STM32F10x_StdPeriph_Examples
+  * @{
+  */
+
+/** @addtogroup EXTI_Example
+  * @{
+  */ 
+
+/* Private typedef -----------------------------------------------------------*/
+/* Private define ------------------------------------------------------------*/
+/* Private macro -------------------------------------------------------------*/
+/* Private variables ---------------------------------------------------------*/
+/* Private function prototypes -----------------------------------------------*/
+/* Private functions ---------------------------------------------------------*/
+
+/******************************************************************************/
+/*            Cortex-M3 Processor Exceptions Handlers                         */
+/******************************************************************************/
+
+/**
+  * @brief  This function handles NMI exception.
+  * @param  None
+  * @retval None
+  */
+void NMI_Handler(void)
+{
+}
+
+/**
+  * @brief  This function handles Hard Fault exception.
+  * @param  None
+  * @retval None
+  */
+void HardFault_Handler(void)
+{
+  /* Go to infinite loop when Hard Fault exception occurs */
+  while (1)
+  {
+  }
+}
+
+/**
+  * @brief  This function handles Memory Manage exception.
+  * @param  None
+  * @retval None
+  */
+void MemManage_Handler(void)
+{
+  /* Go to infinite loop when Memory Manage exception occurs */
+  while (1)
+  {
+  }
+}
+
+/**
+  * @brief  This function handles Bus Fault exception.
+  * @param  None
+  * @retval None
+  */
+void BusFault_Handler(void)
+{
+  /* Go to infinite loop when Bus Fault exception occurs */
+  while (1)
+  {
+  }
+}
+
+/**
+  * @brief  This function handles Usage Fault exception.
+  * @param  None
+  * @retval None
+  */
+void UsageFault_Handler(void)
+{
+  /* Go to infinite loop when Usage Fault exception occurs */
+  while (1)
+  {
+  }
+}
+
+/**
+  * @brief  This function handles SVCall exception.
+  * @param  None
+  * @retval None
+  */
+void SVC_Handler(void)
+{
+}
+
+/**
+  * @brief  This function handles Debug Monitor exception.
+  * @param  None
+  * @retval None
+  */
+void DebugMon_Handler(void)
+{
+}
+
+/**
+  * @brief  This function handles PendSV_Handler exception.
+  * @param  None
+  * @retval None
+  */
+void PendSV_Handler(void)
+{
+}
+
+/**
+  * @brief  This function handles SysTick Handler.
+  * @param  None
+  * @retval None
+  */
+void SysTick_Handler(void)
+{
+}
+
+
+
+/******************************************************************************/
+/*                 STM32F10x Peripherals Interrupt Handlers                   */
+/*  Add here the Interrupt Handler for the used peripheral(s) (PPP), for the  */
+/*  available peripheral interrupt handler's name please refer to the startup */
+/*  file (startup_stm32f10x_xx.s).                                            */
+/******************************************************************************/
+/************************************************************************
+  * @描述:  对PC串口中断
+  * @参数:  None
+  * @返回值: None
+  **********************************************************************/
+__IO u8 ATCmd[100];
+__IO u8 ATLEN = 0;
+__IO MenuType CotrolVale = SYSEND;
+void PC_USART_IRQHandler(void)
+{
+  u8 data;
+  data = data;
+  TIM_ITConfig(TIM2, TIM_IT_Update, DISABLE);
+  if (USART_GetFlagStatus(PC_USART,USART_FLAG_ORE)!= RESET)
+  {
+    data = PC_USART->DR;
+  }
+  if (USART_GetFlagStatus(PC_USART,USART_IT_RXNE)!= RESET) 
+  {
+    ATCmd[ATLEN++] = PC_USART->DR;
+	USART_ITConfig(PC_USART,USART_IT_IDLE,ENABLE);
+  }
+  if(USART_GetFlagStatus(PC_USART,USART_FLAG_IDLE)!= RESET)
+  {
+    data = PC_USART->DR;
+    USART_ITConfig(PC_USART,USART_IT_IDLE,DISABLE);
+    if (!strncmp((const char *)ATCmd,"AT+ISO14230-4ADDR",17))
+	{
+	  CotrolVale = SYS01;
+	  ClearRAM((u8*)ATCmd,100);
+	}
+    else if (!strncmp((const char *)ATCmd,"AT+ISO14230-4HL",15))
+	{
+	  CotrolVale = SYS02;
+	  ClearRAM((u8*)ATCmd,100);
+	}
+    else if (!strncmp((const char *)ATCmd,"AT+ISO9141-2ADDR",16))
+	{
+	  CotrolVale = SYS03;
+	  ClearRAM((u8*)ATCmd,100);
+	}
+    else if (!strncmp((const char *)ATCmd,"AT+ISO15765-4STD_500K",21))
+	{
+	  CotrolVale = SYS04;
+	  ClearRAM((u8*)ATCmd,100);
+	}
+    else if (!strncmp((const char *)ATCmd,"AT+ISO15765-4EXT_500K",21))
+	{
+	  CotrolVale = SYS05;
+	  ClearRAM((u8*)ATCmd,100);
+	}
+    else if (!strncmp((const char *)ATCmd,"AT+ISO15765-4STD_250K",21))
+	{
+	  CotrolVale = SYS06;
+	  ClearRAM((u8*)ATCmd,100);
+	}
+    else if (!strncmp((const char *)ATCmd,"AT+ISO15765-4EXT_250K",21))
+	{
+	  CotrolVale = SYS07;
+	  ClearRAM((u8*)ATCmd,100);
+	}
+	else if (!strncmp((const char *)ATCmd,"AT+EXIT",7))
+	{
+	  CotrolVale = SYSEND;
+	  ClearRAM((u8*)ATCmd,100);
+	}
+	else if (!strncmp((const char *)ATCmd,"AT+CDTC",7))
+	{
+	  CotrolVale = SYSCDTC;
+	  ClearRAM((u8*)ATCmd,100);
+	}
+	else if (!strncmp((const char *)ATCmd,"AT+DTC",6))
+	{
+	  CotrolVale = SYSDTC;
+	  ClearRAM((u8*)ATCmd,100);
+	}
+	else if (!strncmp((const char *)ATCmd,"AT+DS",5))
+	{
+	  CotrolVale = SYSDS;
+	}
+	else if (!strncmp((const char *)ATCmd,"AT+STOPDS",9))
+	{		  
+	  CotrolVale = SYSSTOPDS;
+	  ClearRAM((u8*)ATCmd,100);
+	}
+	else
+	{
+	  printf("ERROR-001\r\n");
+	  CotrolVale = SYSEND;
+	  ClearRAM((u8*)ATCmd,100);
+	}
+	ATLEN = 0;
+  }
+}
+/************************************************************************
+  * @描述:  CAN中断
+  * @参数:  None
+  * @返回值: None
+  **********************************************************************/
+void USB_LP_CAN1_RX0_IRQHandler(void)
+{
+  CanRxMsg RxMessage;
+
+  CAN_Receive(CAN1, CAN_FIFO0, &RxMessage);
+  SaveData(&RxMessage);
+}
+
+
+__IO u8 FI = 0;
+__IO u8 FLCAN = 0;
+void SaveData(CanRxMsg* RxMessage)
+{
+  u8 i,j,TransmitMailbox;
+  CanTxMsg Cmd30H = {0x7DF,0x18DB33F1,CAN_ID_STD,CAN_RTR_DATA,8,0x30,0x00,0x00,0x00,0x00,0x00,0x00,0x00};
+  if (RxMessage->Data[0] == 0x10)
+  {
+    Cmd30H.IDE = RxMessage->IDE;
+	TransmitMailbox = CAN_Transmit(CAN1, &Cmd30H);
+    while(CAN_TransmitStatus(CAN1,TransmitMailbox) != CANTXOK);
+	if ((RxMessage->Data[1]+1)%7 > 0)
+	{
+	  FLCAN = (RxMessage->Data[1]+1)/7 + 1;
+	}
+	else
+	{
+	  FLCAN = (RxMessage->Data[1]+1)/7;
+	}
+	FI = 0;
+  }
+  for(i = 0; i < 8; i++)
+  {
+	RxRAM[i+FI*8] = RxMessage->Data[i];
+  }
+  if (FLCAN	!= 0)
+  {
+	FI++;
+	if (FLCAN  <= FI)
+	{
+	  FI = 0;
+	  for (j = 0; j < FLCAN; j++)
+	  {
+	    for (i = 0; i < 7; i++)
+		{
+		  RxRAM[i+7*j] = RxRAM[i+1+7*j+j];
+		}
+	  }
+	  RxFlay = SUCCESS;
+	  FLCAN = 0;
+	}
+  }
+  else
+  {
+	RxFlay = SUCCESS;
+  }
+}
+
+
+/************************************************************************
+  * @描述:  K线中断
+  * @参数:  None
+  * @返回值: None
+  **********************************************************************/
+__IO u8	LEN;
+__IO u8 ACCBYTE = 0;
+void K_LINE_IRQHandler(void)
+{
+  u8 i;//,
+  ACCBYTE = 0;
+  if (USART_GetFlagStatus(KL_LINE,USART_IT_RXNE)!= RESET) 
+  {
+    RxRAM[LEN++] = KL_LINE->DR;
+    for (i = framelen;i < LEN-1;i++)
+	{
+	  ACCBYTE += RxRAM[i];
+	}
+	if (RxRAM[0] == 0x55 && LEN >= 3 || Actflay == ON && LEN >= 2) //激活部分接收
+	{
+	  RxFlay = SUCCESS;
+	}
+	else if (ACCBYTE == RxRAM[LEN-1] && LEN > framelen + 3)  //累加和效验一帧数据接收完毕 (比前6步程序进行了优化)
+	{
+	  RxFlay = SUCCESS;
+	}
+  }
+}
+/************************************************************************
+  * @描述:  定时器2中断，用于不间断向PC输出数据流
+  * @参数:  None
+  * @返回值: None
+  **********************************************************************/
+void TIM2_IRQHandler(void)
+{
+  if (TIM_GetITStatus(TIM2, TIM_IT_Update) != RESET)
+  {
+    TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
+	printf((char*)DSRAM);
+	printf("\r\n");
+  }
+}
+/************************************************************************
+  * @描述:  定时器3中断，LED灯闪烁正常工作
+  * @参数:  None
+  * @返回值: None
+  **********************************************************************/
+FlagStatus LEDStatus = SET;
+void TIM3_IRQHandler(void)
+{
+  if (TIM_GetITStatus(TIM3, TIM_IT_Update) != RESET)
+  {
+    TIM_ClearITPendingBit(TIM3, TIM_IT_Update);
+	if (LEDStatus == SET)
+	{
+	  LED_ONOFF(ON);
+	  LEDStatus = RESET;
+	}
+	else
+	{
+	  LED_ONOFF(OFF);
+	  LEDStatus = SET;
+	}
+	
+  }
+}
+/**
+  * @}
+  */ 
+
+/**
+  * @}
+  */ 
+
+/******************* (C) COPYRIGHT 2010 STMicroelectronics *****END OF FILE****/

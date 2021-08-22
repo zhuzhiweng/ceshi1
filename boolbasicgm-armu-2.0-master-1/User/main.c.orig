@@ -1,0 +1,43 @@
+
+//*@产品购买网址:https://shop115932063.taobao.com
+
+#include "includes.h"
+
+
+
+
+int main(void)
+{
+  LED_Config();
+  PC_USART_Config(256000);
+  TIM2_Config();
+  TIM3_Config();
+  TIM_ITConfig(TIM3, TIM_IT_Update, ENABLE);
+  while(1)
+  {
+    KL_LINE_Enable(Destroy);
+    switch (CotrolVale)
+    {
+	  case SYSEND:
+	  break;
+      case SYS01: ISO14230_4ADDR();                //ISO14230-4地址模式
+      break;
+      case SYS02: ISO14230_4HL();				   //ISO14230-4快速模式
+      break;
+      case SYS03: ISO9141_2ADDR();				   //ISO9141-2
+      break;
+      case SYS04: ISO15765_4(CAN_ID_STD,CAN_500K); //ISO15765_4 标准 11BIT 500K 
+      break;
+      case SYS05: ISO15765_4(CAN_ID_EXT,CAN_500K); //ISO15765_4 扩展 29BIT 500K
+      break;
+      case SYS06: ISO15765_4(CAN_ID_STD,CAN_250K); //ISO15765_4 标准 11BIT 250K
+      break;
+      case SYS07: ISO15765_4(CAN_ID_EXT,CAN_250K); //ISO15765_4 扩展 29BIT 250K
+      break;
+      default:
+	  printf("ERROR-002\r\n");
+	  CotrolVale = SYSEND;
+      break;
+    }
+  }
+}

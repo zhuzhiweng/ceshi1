@@ -1,0 +1,100 @@
+
+#ifndef __BSP_H
+#define __BSP_H
+
+/**************************结构类型************************************/
+typedef enum {APB1 = 0, APB2} APBType;
+typedef enum {OFF = 0, ON} SwitchType;
+typedef enum {Numeric = 0, Character} DataType;
+typedef enum {SYSEND = 0, SYS01,SYS02,SYS03,SYS04,SYS05,SYS06,SYS07,SYSXX,SYSDTC,SYSCDTC,SYSDS,SYSRDS,SYSSTOPDS} MenuType;
+typedef struct
+{
+  __IO DataType	Type;
+  __IO u8 PIDByte;
+  __IO u8 FineByte;
+  __IO char *Format;
+  float (*Equation0)(u8* data);
+  char* (*Equation1)(u8* data);
+}DSControlTypeDef;
+typedef struct
+{
+  __IO u8    flay;
+  __IO float result;
+  __IO char *string;
+}DSSTypeDef;
+/**************************函数声明************************************/
+void PC_USART_Config(u32 Baud);
+void NVIC_Config(void);
+void LED_Config(void);
+void LED_ONOFF(SwitchType sw);
+void CAN_GPIOConfig(void);
+void CAN_Config(u8 velocity);
+void CAN1_Config32BitFilter(u32 id1, u32 id2, u32 mid1, u32 mid2);
+void CAN1_Config16BitFilter(u16 id1, u16 id2, u16 mid1, u16 mid2);
+u8* Send_CANFrame(CanTxMsg* TxMessage,u8 CANStype,ErrorStatus* err);
+void KL_LINE_Config(u32 Baud);
+void KL_LINE_Enable(u8 KL);
+u8* Send_KWP2000Frame(u8* TxMessage,ErrorStatus* err);
+u8* Send_ISO9141Frame(u8* TxMessage,ErrorStatus* err);
+ErrorStatus Wakeup_Addr(u8 addr);
+void KL_CAN_STOP(void);
+char* PCBU(u16 dtc);
+void ClearRAM(u8* ram,u32 n);
+void TIM2_Config(void);
+void TIM3_Config(void);
+/**************************全局变量************************************/
+extern __IO char         DTCRAM[200];
+extern __IO char         DSRAM[100];
+extern __IO DSSTypeDef   DSStatus[266];
+/**************************全局变量************************************/
+extern __IO ErrorStatus RxFlay;
+extern __IO u8 RxRAM[100];
+extern __IO u8 LEN;
+extern __IO u8 framelen;
+extern __IO SwitchType Actflay;
+extern char PCBUCode[5];
+/**************************PC串口配置**********************************/
+#define RCC_APBxPeriph_PC_USART_IO   RCC_APB2Periph_GPIOA
+#define RCC_APBxPeriph_PC_USART		 RCC_APB1Periph_USART2
+#define PC_USART_TXD				 GPIO_Pin_2
+#define PC_USART_RXD				 GPIO_Pin_3
+#define PC_USART_IO					 GPIOA
+#define PC_USART	                 USART2
+#define PC_PinRemap					 DISABLE
+#define PC_USARTAPB					 APB1
+#define PC_USART_IRQHandler			 USART2_IRQHandler
+/**************************LED配置*************************************/
+#define RCC_APBxPeriph_LED_IO	     RCC_APB2Periph_GPIOA
+#define LED_D2						 GPIO_Pin_6
+#define LED_IO						 GPIOA
+/**************************CAN配置*************************************/
+#define CAN_500K                     4
+#define CAN_250K                     8
+#define CAN_125K                     16
+#define RCC_APBxPeriph_CAN_IO        RCC_APB2Periph_GPIOB
+#define CAN_RXD					     GPIO_Pin_8
+#define CAN_TXD						 GPIO_Pin_9
+#define CAN_IO						 GPIOB
+#define CAN_PinRemap				 ENABLE
+/**************************KL线配置************************************/
+#define K_LINE                       1
+#define L_LINE					     2
+#define Destroy						 0xFF
+#define RCC_APBxPeriph_KL_LINE_IO    RCC_APB2Periph_GPIOB
+#define RCC_APBxPeriph_KL_LINE	     RCC_APB2Periph_USART1
+#define KL_LINE_TXD				     GPIO_Pin_6
+#define KL_LINE_RXD				     GPIO_Pin_7
+#define KL_LINE_IO				     GPIOB
+#define KL_LINE	                     USART1
+#define KL_LINE_PinRemap		     ENABLE
+#define KL_LINEAPB				     APB2
+#define K_LINE_IRQHandler		     USART1_IRQHandler
+/**************************KL控制配置**********************************/
+#define RCC_APB2Periph_SET_K_LINE_IO RCC_APB2Periph_GPIOB
+#define RCC_APB2Periph_SET_L_LINE_IO RCC_APB2Periph_GPIOB
+#define SET_K_LINE_PIN				 GPIO_Pin_3
+#define SET_K_LINE_IO				 GPIOB
+#define SET_L_LINE_PIN				 GPIO_Pin_4
+#define SET_L_LINE_IO				 GPIOB
+/**********************************************************************/
+#endif

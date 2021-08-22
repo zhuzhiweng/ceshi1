@@ -1,0 +1,66 @@
+diff a/GB17691/GB17691A.c b/GB17691/GB17691A.c	(rejected hunks)
+@@ -916,35 +916,35 @@
+             GB17691_data_package[2] = VEHICLE_UPLOAD_CMD;//VEHICLE_UPLOAD_CMD;
+ 						
+ 					//--------------------------------------ǩ������ܴ�� ----------------------------
+-						ps=Signature(&GB17691_data_package[32],data_len-8);					//ǩ��
+-						if(ps==NULL)
+-							ps=Signature(&GB17691_data_package[32],data_len-8);	
+-						memcpy(&data_sign,ps,64);
+-					
+-						ps=Encrypt(&GB17691_data_package[32],data_len-8); 				//���ݼ���
+-						if(ps==NULL)
+-							ps=Encrypt(&GB17691_data_package[32],data_len-8); 
+-						memcpy(&GB17691_data_package[32],ps,data_len-8+96);
+-						data_len+=96;
+-					
+-						GB17691_data_package[24+data_len] =32;   // ǩ��Rֵ
+-						data_len++;
+-							for(uint8_t i=0;i<32;i++)
+-							{
+-								GB17691_data_package[24+data_len+i]=data_sign[i];
+-							}
+-							data_len=data_len+32;
+-							
+-						GB17691_data_package[24+data_len] =32;     // ǩ��Sֵ
+-							data_len++;
+-						for(uint8_t i=0;i<32;i++)
+-						{
+-							GB17691_data_package[24+data_len+i]=data_sign[i+32];
+-						}											
+-							data_len=data_len+32;
+-						
+-						GB17691_data_package[22] = (uint8_t)(data_len >> 8);                   // 6+ 2 + 1+2+15 + 1+96 +1+37 +1+2+8
+-						GB17691_data_package[23] = (uint8_t)data_len;						
++//						ps=Signature(&GB17691_data_package[32],data_len-8);					//ǩ��
++//						if(ps==NULL)
++//							ps=Signature(&GB17691_data_package[32],data_len-8);	
++//						memcpy(&data_sign,ps,64);
++//					
++//						ps=Encrypt(&GB17691_data_package[32],data_len-8); 				//���ݼ���
++//						if(ps==NULL)
++//							ps=Encrypt(&GB17691_data_package[32],data_len-8); 
++//						memcpy(&GB17691_data_package[32],ps,data_len-8+96);
++//						data_len+=96;
++//					
++//						GB17691_data_package[24+data_len] =32;   // ǩ��Rֵ
++//						data_len++;
++//							for(uint8_t i=0;i<32;i++)
++//							{
++//								GB17691_data_package[24+data_len+i]=data_sign[i];
++//							}
++//							data_len=data_len+32;
++//							
++//						GB17691_data_package[24+data_len] =32;     // ǩ��Sֵ
++//							data_len++;
++//						for(uint8_t i=0;i<32;i++)
++//						{
++//							GB17691_data_package[24+data_len+i]=data_sign[i+32];
++//						}											
++//							data_len=data_len+32;
++//						
++//						GB17691_data_package[22] = (uint8_t)(data_len >> 8);                   // 6+ 2 + 1+2+15 + 1+96 +1+37 +1+2+8
++//						GB17691_data_package[23] = (uint8_t)data_len;						
+ 					//--------------------------------------ǩ������ܴ������----------------------------------------------
+ 						
+             GB17691_data_package[24+data_len] = EvalBCC_FromBytes(&GB17691_data_package[2], data_len+22);//���У����

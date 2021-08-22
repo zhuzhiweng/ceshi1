@@ -1,2170 +1,0 @@
-Dependencies for Project 'EOBD', Target 'EOBD-2G': (DO NOT MODIFY !)
-F (..\User\main.c)(0x60FD61CB)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\main.o --omf_browse .\output\main.crf --depend .\output\main.d)
-I (D:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC\cmsis_os.h)(0x5983FFB6)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (D:\dizhi\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
-I (..\User\includes.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-I (..\utils\utils.h)(0x60F776BC)
-I (..\hardware\WKUP\wkup.h)(0x60F776BC)
-I (..\hardware\sys.h)(0x60F776BC)
-I (..\hardware\iwdg.h)(0x60F776BC)
-I (..\NetManage\sim_net.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
-I (D:\dizhi\ARM\ARMCC\include\string.h)(0x599ECD2C)
-I (..\NetManage\sim_uart.h)(0x60F776BC)
-I (..\GB17691\GB17691A.h)(0x60F94092)
-I (..\Bsp\delay.h)(0x60F776BC)
-I (..\hardware\RTC.h)(0x60F776BC)
-I (..\GPS\GPS_calculation.h)(0x60F776BC)
-I (..\GPS\gps.h)(0x60F776BC)
-I (..\hardware\spi_flash.h)(0x60F776BC)
-I (..\GB17691\GB17691_CAN_GPS.h)(0x60FD9B32)
-I (..\OBD\CAN.h)(0x60F776BC)
-I (..\User\user_config.h)(0x60FD6517)
-I (..\hardware\sleep.h)(0x60F776BC)
-I (..\hardware\power_ctl.h)(0x60F776BC)
-I (..\OBD\obd.h)(0x60F776BC)
-I (..\OBD\UDS.h)(0x60F776BC)
-I (..\OBD\CanDataAnalysis.h)(0x60F776BC)
-I (..\Bsp\bsp.h)(0x60F776BC)
-I (..\hardware\define.h)(0x60F776BC)
-I (..\User\TerminalTest.h)(0x60F776BC)
-I (..\hardware\LKT4305_IIC.h)(0x60F776BC)
-I (..\hardware\timer.h)(0x60F776BC)
-F (..\User\TerminalTest.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\terminaltest.o --omf_browse .\output\terminaltest.crf --depend .\output\terminaltest.d)
-I (..\User\TerminalTest.h)(0x60F776BC)
-I (..\hardware\sys.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
-I (D:\dizhi\ARM\ARMCC\include\string.h)(0x599ECD2C)
-I (..\OBD\obd.h)(0x60F776BC)
-I (..\Bsp\Bsp.h)(0x60F776BC)
-I (..\hardware\define.h)(0x60F776BC)
-I (..\hardware\UART.h)(0x60F776BC)
-I (..\NetManage\sim_net.h)(0x60F776BC)
-I (..\NetManage\sim_uart.h)(0x60F776BC)
-I (..\GPS\gps.h)(0x60F776BC)
-I (..\hardware\RTC.h)(0x60F776BC)
-I (..\GB17691\GB17691A.h)(0x60F94092)
-I (..\User\includes.h)(0x60F776BC)
-I (..\Bsp\delay.h)(0x60F776BC)
-I (..\GPS\GPS_calculation.h)(0x60F776BC)
-I (..\hardware\spi_flash.h)(0x60F776BC)
-I (D:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC\cmsis_os.h)(0x5983FFB6)
-I (D:\dizhi\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
-I (..\GB17691\GB17691_CAN_GPS.h)(0x60FD9B32)
-I (..\OBD\CAN.h)(0x60F776BC)
-I (..\User\user_config.h)(0x60FD6517)
-I (..\hardware\power_ctl.h)(0x60F776BC)
-I (..\hardware\sleep.h)(0x60F776BC)
-F (..\User\stm32f10x_it.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\stm32f10x_it.o --omf_browse .\output\stm32f10x_it.crf --depend .\output\stm32f10x_it.d)
-I (..\User\includes.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-F (..\User\user_config.h)(0x60FD6517)()
-F (..\OBD\can.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\can.o --omf_browse .\output\can.crf --depend .\output\can.d)
-I (..\OBD\CAN.h)(0x60F776BC)
-I (..\hardware\sys.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
-I (D:\dizhi\ARM\ARMCC\include\string.h)(0x599ECD2C)
-I (..\User\TerminalTest.h)(0x60F776BC)
-F (..\OBD\iso_15765.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\iso_15765.o --omf_browse .\output\iso_15765.crf --depend .\output\iso_15765.d)
-I (..\OBD\iso_15765.h)(0x60F776BC)
-I (..\hardware\sys.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-I (..\OBD\obd.h)(0x60F776BC)
-I (..\OBD\CanDataAnalysis.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
-I (D:\dizhi\ARM\ARMCC\include\string.h)(0x599ECD2C)
-I (..\OBD\CAN.h)(0x60F776BC)
-I (..\utils\utils.h)(0x60F776BC)
-I (D:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC\cmsis_os.h)(0x5983FFB6)
-I (D:\dizhi\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
-I (..\OBD\UDS.h)(0x60F776BC)
-F (..\OBD\j_1939.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\j_1939.o --omf_browse .\output\j_1939.crf --depend .\output\j_1939.d)
-I (..\OBD\j_1939.h)(0x60F776BC)
-I (..\hardware\sys.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-I (..\OBD\obd.h)(0x60F776BC)
-I (..\OBD\CanDataAnalysis.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
-I (D:\dizhi\ARM\ARMCC\include\string.h)(0x599ECD2C)
-I (..\OBD\CAN.h)(0x60F776BC)
-I (..\OBD\iso_15765.h)(0x60F776BC)
-I (..\OBD\UDS.h)(0x60F776BC)
-I (..\utils\utils.h)(0x60F776BC)
-I (D:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC\cmsis_os.h)(0x5983FFB6)
-I (D:\dizhi\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
-I (D:\dizhi\ARM\ARMCC\include\math.h)(0x599ECD2E)
-F (..\OBD\obd.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\obd.o --omf_browse .\output\obd.crf --depend .\output\obd.d)
-I (..\OBD\can.h)(0x60F776BC)
-I (..\hardware\sys.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
-I (D:\dizhi\ARM\ARMCC\include\string.h)(0x599ECD2C)
-I (..\Bsp\delay.h)(0x60F776BC)
-I (..\OBD\obd.h)(0x60F776BC)
-I (..\OBD\j_1939.h)(0x60F776BC)
-I (..\OBD\CanDataAnalysis.h)(0x60F776BC)
-I (..\OBD\iso_15765.h)(0x60F776BC)
-I (..\GB17691\GB17691_CAN_GPS.h)(0x60FD9B32)
-I (..\hardware\define.h)(0x60F776BC)
-I (D:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC\cmsis_os.h)(0x5983FFB6)
-I (D:\dizhi\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
-I (..\hardware\UART.h)(0x60F776BC)
-I (..\Bsp\bsp.h)(0x60F776BC)
-I (..\hardware\spi_flash.h)(0x60F776BC)
-I (..\hardware\RTC.h)(0x60F776BC)
-I (..\OBD\UDS.h)(0x60F776BC)
-F (..\OBD\CanDataAnalysis.c)(0x60F7793A)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\candataanalysis.o --omf_browse .\output\candataanalysis.crf --depend .\output\candataanalysis.d)
-I (..\OBD\CanDataAnalysis.h)(0x60F776BC)
-I (..\hardware\sys.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
-I (D:\dizhi\ARM\ARMCC\include\string.h)(0x599ECD2C)
-I (..\OBD\CAN.h)(0x60F776BC)
-I (..\OBD\obd.h)(0x60F776BC)
-F (..\OBD\UDS.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\uds.o --omf_browse .\output\uds.crf --depend .\output\uds.d)
-I (..\OBD\UDS.h)(0x60F776BC)
-I (..\hardware\sys.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
-I (D:\dizhi\ARM\ARMCC\include\string.h)(0x599ECD2C)
-I (..\OBD\obd.h)(0x60F776BC)
-I (..\OBD\CanDataAnalysis.h)(0x60F776BC)
-I (..\OBD\CAN.h)(0x60F776BC)
-I (..\GPS\gps.h)(0x60F776BC)
-I (..\hardware\RTC.h)(0x60F776BC)
-I (..\hardware\spi_flash.h)(0x60F776BC)
-I (D:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC\cmsis_os.h)(0x5983FFB6)
-I (D:\dizhi\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
-I (..\NetManage\sim_net.h)(0x60F776BC)
-I (..\NetManage\sim_uart.h)(0x60F776BC)
-F (..\hardware\spi_flash.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\spi_flash.o --omf_browse .\output\spi_flash.crf --depend .\output\spi_flash.d)
-I (..\hardware\spi_flash.h)(0x60F776BC)
-I (..\hardware\sys.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
-I (D:\dizhi\ARM\ARMCC\include\string.h)(0x599ECD2C)
-I (..\hardware\RTC.h)(0x60F776BC)
-I (D:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC\cmsis_os.h)(0x5983FFB6)
-I (D:\dizhi\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
-I (..\Bsp\delay.h)(0x60F776BC)
-I (..\User\user_config.h)(0x60FD6517)
-I (..\GB17691\GB17691A.h)(0x60F94092)
-I (..\User\includes.h)(0x60F776BC)
-I (..\GPS\GPS_calculation.h)(0x60F776BC)
-I (..\GPS\gps.h)(0x60F776BC)
-I (..\NetManage\sim_uart.h)(0x60F776BC)
-I (..\NetManage\sim_net.h)(0x60F776BC)
-I (..\GB17691\GB17691_CAN_GPS.h)(0x60FD9B32)
-I (..\OBD\CAN.h)(0x60F776BC)
-F (..\GB17691\GB17691_CAN_GPS.c)(0x60FDA22D)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\gb17691_can_gps.o --omf_browse .\output\gb17691_can_gps.crf --depend .\output\gb17691_can_gps.d)
-I (D:\dizhi\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
-I (D:\dizhi\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
-I (..\GB17691\GB17691_CAN_GPS.h)(0x60FD9B32)
-I (..\hardware\sys.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\string.h)(0x599ECD2C)
-I (..\OBD\CAN.h)(0x60F776BC)
-I (..\GPS\GPS_calculation.h)(0x60F776BC)
-I (..\GPS\gps.h)(0x60F776BC)
-I (..\hardware\RTC.h)(0x60F776BC)
-I (..\OBD\obd.h)(0x60F776BC)
-I (..\User\user_config.h)(0x60FD6517)
-I (..\hardware\UART.h)(0x60F776BC)
-I (..\NetManage\sim_net.h)(0x60F776BC)
-I (..\NetManage\sim_uart.h)(0x60F776BC)
-I (..\hardware\define.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdarg.h)(0x599ECD2A)
-F (..\GB17691\GB17691A.c)(0x60FDA187)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\gb17691a.o --omf_browse .\output\gb17691a.crf --depend .\output\gb17691a.d)
-I (..\GB17691\GB17691A.h)(0x60F94092)
-I (..\hardware\sys.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
-I (D:\dizhi\ARM\ARMCC\include\string.h)(0x599ECD2C)
-I (..\User\includes.h)(0x60F776BC)
-I (..\Bsp\delay.h)(0x60F776BC)
-I (..\hardware\RTC.h)(0x60F776BC)
-I (..\GPS\GPS_calculation.h)(0x60F776BC)
-I (..\GPS\gps.h)(0x60F776BC)
-I (..\NetManage\sim_uart.h)(0x60F776BC)
-I (..\NetManage\sim_net.h)(0x60F776BC)
-I (..\hardware\spi_flash.h)(0x60F776BC)
-I (D:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC\cmsis_os.h)(0x5983FFB6)
-I (D:\dizhi\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
-I (..\GB17691\GB17691_CAN_GPS.h)(0x60FD9B32)
-I (..\OBD\CAN.h)(0x60F776BC)
-I (..\User\user_config.h)(0x60FD6517)
-I (..\hardware\power_ctl.h)(0x60F776BC)
-I (..\hardware\LKT4305_IIC.h)(0x60F776BC)
-I (..\User\TerminalTest.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdarg.h)(0x599ECD2A)
-I (..\OBD\obd.h)(0x60F776BC)
-I (..\OBD\UDS.h)(0x60F776BC)
-I (..\OBD\CanDataAnalysis.h)(0x60F776BC)
-I (..\hardware\UART.h)(0x60F776BC)
-F (..\GPS\GPS_calculation.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\gps_calculation.o --omf_browse .\output\gps_calculation.crf --depend .\output\gps_calculation.d)
-I (..\GPS\GPS_calculation.h)(0x60F776BC)
-I (..\hardware\sys.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
-I (D:\dizhi\ARM\ARMCC\include\string.h)(0x599ECD2C)
-I (..\GPS\gps.h)(0x60F776BC)
-I (..\hardware\RTC.h)(0x60F776BC)
-I (..\hardware\spi_flash.h)(0x60F776BC)
-I (D:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC\cmsis_os.h)(0x5983FFB6)
-I (D:\dizhi\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
-I (..\hardware\power_ctl.h)(0x60F776BC)
-F (..\GPS\gps.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\gps.o --omf_browse .\output\gps.crf --depend .\output\gps.d)
-I (..\GPS\gps.h)(0x60F776BC)
-I (..\hardware\sys.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
-I (D:\dizhi\ARM\ARMCC\include\string.h)(0x599ECD2C)
-I (..\hardware\RTC.h)(0x60F776BC)
-F (..\NetManage\crc.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\crc.o --omf_browse .\output\crc.crf --depend .\output\crc.d)
-I (..\NetManage\crc.h)(0x60F776BC)
-I (..\hardware\sys.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
-I (D:\dizhi\ARM\ARMCC\include\string.h)(0x599ECD2C)
-I (..\hardware\spi_flash.h)(0x60F776BC)
-I (..\hardware\RTC.h)(0x60F776BC)
-I (D:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC\cmsis_os.h)(0x5983FFB6)
-I (D:\dizhi\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
-F (..\NetManage\sim_pwrkey.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\sim_pwrkey.o --omf_browse .\output\sim_pwrkey.crf --depend .\output\sim_pwrkey.d)
-I (..\NetManage\sim_pwrkey.h)(0x60F776BC)
-I (..\hardware\sys.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
-I (D:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC\cmsis_os.h)(0x5983FFB6)
-I (D:\dizhi\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
-F (..\NetManage\sim_uart.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\sim_uart.o --omf_browse .\output\sim_uart.crf --depend .\output\sim_uart.d)
-I (..\NetManage\sim_uart.h)(0x60F776BC)
-I (..\hardware\sys.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
-I (D:\dizhi\ARM\ARMCC\include\string.h)(0x599ECD2C)
-I (..\hardware\define.h)(0x60F776BC)
-I (..\User\user_config.h)(0x60FD6517)
-I (..\Bsp\Bsp.h)(0x60F776BC)
-I (..\hardware\UART.h)(0x60F776BC)
-I (..\NetManage\MultiSocket.h)(0x60F776BC)
-F (..\NetManage\sim_net.c)(0x60FA321A)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\sim_net.o --omf_browse .\output\sim_net.crf --depend .\output\sim_net.d)
-I (..\NetManage\sim_net.h)(0x60F776BC)
-I (..\hardware\sys.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
-I (D:\dizhi\ARM\ARMCC\include\string.h)(0x599ECD2C)
-I (..\NetManage\sim_uart.h)(0x60F776BC)
-I (..\hardware\define.h)(0x60F776BC)
-I (..\User\user_config.h)(0x60FD6517)
-I (..\NetManage\sim_pwrkey.h)(0x60F776BC)
-I (..\hardware\spi_flash.h)(0x60F776BC)
-I (..\hardware\RTC.h)(0x60F776BC)
-I (D:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC\cmsis_os.h)(0x5983FFB6)
-I (D:\dizhi\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
-I (..\NetManage\crc.h)(0x60F776BC)
-I (..\hardware\power_ctl.h)(0x60F776BC)
-I (..\GB17691\GB17691A.h)(0x60F94092)
-I (..\User\includes.h)(0x60F776BC)
-I (..\Bsp\delay.h)(0x60F776BC)
-I (..\GPS\GPS_calculation.h)(0x60F776BC)
-I (..\GPS\gps.h)(0x60F776BC)
-I (..\GB17691\GB17691_CAN_GPS.h)(0x60FD9B32)
-I (..\OBD\CAN.h)(0x60F776BC)
-I (..\OBD\obd.h)(0x60F776BC)
-I (..\NetManage\MultiSocket.h)(0x60F776BC)
-I (..\User\TerminalTest.h)(0x60F776BC)
-F (..\NetManage\MultiSocket.h)(0x60F776BC)()
-F (..\NetManage\multiSocket.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\multisocket.o --omf_browse .\output\multisocket.crf --depend .\output\multisocket.d)
-I (..\NetManage\sim_net.h)(0x60F776BC)
-I (..\hardware\sys.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
-I (D:\dizhi\ARM\ARMCC\include\string.h)(0x599ECD2C)
-I (..\NetManage\sim_uart.h)(0x60F776BC)
-I (..\NetManage\MultiSocket.h)(0x60F776BC)
-I (..\User\TerminalTest.h)(0x60F776BC)
-I (..\User\user_config.h)(0x60FD6517)
-F (..\Bsp\Bsp.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\bsp.o --omf_browse .\output\bsp.crf --depend .\output\bsp.d)
-I (..\Bsp\Bsp.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-I (..\hardware\define.h)(0x60F776BC)
-I (..\User\includes.h)(0x60F776BC)
-F (..\hardware\SPI.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\spi.o --omf_browse .\output\spi.crf --depend .\output\spi.d)
-I (..\hardware\spi.h)(0x60F776BC)
-I (..\hardware\sys.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-F (..\hardware\UART.c)(0x60FDA04D)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\uart.o --omf_browse .\output\uart.crf --depend .\output\uart.d)
-I (..\hardware\UART.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-I (..\hardware\spi_flash.h)(0x60F776BC)
-I (..\hardware\sys.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
-I (D:\dizhi\ARM\ARMCC\include\string.h)(0x599ECD2C)
-I (..\hardware\RTC.h)(0x60F776BC)
-I (D:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC\cmsis_os.h)(0x5983FFB6)
-I (D:\dizhi\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
-I (..\hardware\power_ctl.h)(0x60F776BC)
-I (..\NetManage\crc.h)(0x60F776BC)
-I (..\Bsp\Bsp.h)(0x60F776BC)
-I (..\hardware\define.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdarg.h)(0x599ECD2A)
-F (..\hardware\dma.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\dma.o --omf_browse .\output\dma.crf --depend .\output\dma.d)
-I (..\hardware\dma.h)(0x60F776BC)
-I (..\hardware\sys.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-F (..\hardware\timer.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\timer.o --omf_browse .\output\timer.crf --depend .\output\timer.d)
-I (..\hardware\timer.h)(0x60F776BC)
-I (..\hardware\sys.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-I (..\hardware\iwdg.h)(0x60F776BC)
-I (..\hardware\UART.h)(0x60F776BC)
-F (..\hardware\iwdg.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\iwdg.o --omf_browse .\output\iwdg.crf --depend .\output\iwdg.d)
-I (..\hardware\iwdg.h)(0x60F776BC)
-I (..\hardware\sys.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-F (..\hardware\WKUP\wkup.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\wkup.o --omf_browse .\output\wkup.crf --depend .\output\wkup.d)
-I (..\hardware\WKUP\wkup.h)(0x60F776BC)
-I (..\hardware\sys.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-I (..\Bsp\delay.h)(0x60F776BC)
-F (..\hardware\rtc.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\rtc.o --omf_browse .\output\rtc.crf --depend .\output\rtc.d)
-I (D:\dizhi\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
-I (D:\dizhi\ARM\ARMCC\include\string.h)(0x599ECD2C)
-I (D:\dizhi\ARM\ARMCC\include\math.h)(0x599ECD2E)
-I (D:\dizhi\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
-I (..\hardware\rtc.h)(0x60F776BC)
-I (..\hardware\sys.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-I (..\Bsp\delay.h)(0x60F776BC)
-I (D:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC\cmsis_os.h)(0x5983FFB6)
-I (D:\dizhi\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
-F (..\hardware\power_ctl.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\power_ctl.o --omf_browse .\output\power_ctl.crf --depend .\output\power_ctl.d)
-I (..\hardware\power_ctl.h)(0x60F776BC)
-I (..\hardware\sys.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
-I (D:\dizhi\ARM\ARMCC\include\string.h)(0x599ECD2C)
-I (..\NetManage\sim_net.h)(0x60F776BC)
-I (..\NetManage\sim_uart.h)(0x60F776BC)
-I (..\GB17691\GB17691A.h)(0x60F94092)
-I (..\User\includes.h)(0x60F776BC)
-I (..\Bsp\delay.h)(0x60F776BC)
-I (..\hardware\RTC.h)(0x60F776BC)
-I (..\GPS\GPS_calculation.h)(0x60F776BC)
-I (..\GPS\gps.h)(0x60F776BC)
-I (..\hardware\spi_flash.h)(0x60F776BC)
-I (D:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC\cmsis_os.h)(0x5983FFB6)
-I (D:\dizhi\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
-I (..\GB17691\GB17691_CAN_GPS.h)(0x60FD9B32)
-I (..\OBD\CAN.h)(0x60F776BC)
-I (..\User\user_config.h)(0x60FD6517)
-I (..\hardware\sleep.h)(0x60F776BC)
-I (..\Bsp\Bsp.h)(0x60F776BC)
-I (..\hardware\define.h)(0x60F776BC)
-I (..\hardware\UART.h)(0x60F776BC)
-F (..\hardware\sleep.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\sleep.o --omf_browse .\output\sleep.crf --depend .\output\sleep.d)
-I (..\hardware\sleep.h)(0x60F776BC)
-I (..\hardware\sys.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
-I (D:\dizhi\ARM\ARMCC\include\string.h)(0x599ECD2C)
-I (..\hardware\RTC.h)(0x60F776BC)
-F (..\hardware\LKT4305_IIC.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\lkt4305_iic.o --omf_browse .\output\lkt4305_iic.crf --depend .\output\lkt4305_iic.d)
-I (..\hardware\LKT4305_IIC.h)(0x60F776BC)
-I (..\hardware\sys.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-I (D:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC\cmsis_os.h)(0x5983FFB6)
-I (D:\dizhi\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
-I (D:\dizhi\ARM\ARMCC\include\string.h)(0x599ECD2C)
-I (..\hardware\spi_flash.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
-I (..\hardware\RTC.h)(0x60F776BC)
-F (..\Lib\n32g45x_std_periph_driver\src\n32g45x_adc.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\n32g45x_adc.o --omf_browse .\output\n32g45x_adc.crf --depend .\output\n32g45x_adc.d)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-F (..\Lib\n32g45x_std_periph_driver\src\n32g45x_bkp.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\n32g45x_bkp.o --omf_browse .\output\n32g45x_bkp.crf --depend .\output\n32g45x_bkp.d)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-F (..\Lib\n32g45x_std_periph_driver\src\n32g45x_can.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\n32g45x_can.o --omf_browse .\output\n32g45x_can.crf --depend .\output\n32g45x_can.d)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-F (..\Lib\n32g45x_std_periph_driver\src\n32g45x_dbg.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\n32g45x_dbg.o --omf_browse .\output\n32g45x_dbg.crf --depend .\output\n32g45x_dbg.d)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-F (..\Lib\n32g45x_std_periph_driver\src\n32g45x_dma.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\n32g45x_dma.o --omf_browse .\output\n32g45x_dma.crf --depend .\output\n32g45x_dma.d)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-F (..\Lib\n32g45x_std_periph_driver\src\n32g45x_rtc.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\n32g45x_rtc.o --omf_browse .\output\n32g45x_rtc.crf --depend .\output\n32g45x_rtc.d)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-F (..\Lib\n32g45x_std_periph_driver\src\n32g45x_exti.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\n32g45x_exti.o --omf_browse .\output\n32g45x_exti.crf --depend .\output\n32g45x_exti.d)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-F (..\Lib\n32g45x_std_periph_driver\src\n32g45x_gpio.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\n32g45x_gpio.o --omf_browse .\output\n32g45x_gpio.crf --depend .\output\n32g45x_gpio.d)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-F (..\Lib\n32g45x_std_periph_driver\src\n32g45x_iwdg.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\n32g45x_iwdg.o --omf_browse .\output\n32g45x_iwdg.crf --depend .\output\n32g45x_iwdg.d)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-F (..\Lib\n32g45x_std_periph_driver\src\n32g45x_spi.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\n32g45x_spi.o --omf_browse .\output\n32g45x_spi.crf --depend .\output\n32g45x_spi.d)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-F (..\Lib\n32g45x_std_periph_driver\src\n32g45x_tim.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\n32g45x_tim.o --omf_browse .\output\n32g45x_tim.crf --depend .\output\n32g45x_tim.d)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-F (..\Lib\n32g45x_std_periph_driver\src\n32g45x_usart.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\n32g45x_usart.o --omf_browse .\output\n32g45x_usart.crf --depend .\output\n32g45x_usart.d)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-F (..\Lib\n32g45x_std_periph_driver\src\n32g45x_xfmc.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\n32g45x_xfmc.o --omf_browse .\output\n32g45x_xfmc.crf --depend .\output\n32g45x_xfmc.d)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-F (..\Lib\n32g45x_std_periph_driver\src\misc.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\misc.o --omf_browse .\output\misc.crf --depend .\output\misc.d)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-F (..\Lib\n32g45x_std_periph_driver\src\n32g45x_rcc.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\n32g45x_rcc.o --omf_browse .\output\n32g45x_rcc.crf --depend .\output\n32g45x_rcc.d)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-F (..\Lib\n32g45x_std_periph_driver\src\n32g45x_pwr.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\n32g45x_pwr.o --omf_browse .\output\n32g45x_pwr.crf --depend .\output\n32g45x_pwr.d)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
-F (..\utils\utils.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\utils.o --omf_browse .\output\utils.crf --depend .\output\utils.d)
-I (..\utils\utils.h)(0x60F776BC)
-I (D:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC\cmsis_os.h)(0x5983FFB6)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (D:\dizhi\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
-F (D:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\LIB\ARM\RTX_CM4.lib)(0x58AA8AF8)()
-F (RTE\CMSIS\RTX_Conf_CM.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\rtx_conf_cm.o --omf_browse .\output\rtx_conf_cm.crf --depend .\output\rtx_conf_cm.d)
-I (D:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC\cmsis_os.h)(0x5983FFB6)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (D:\dizhi\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
-I (D:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC\RTX_CM_lib.h)(0x5A55AB0E)
-F (RTE\Device\N32G455REL7\startup_n32g45x.s)(0x60F776BC)(--cpu Cortex-M4.fp --pd "__RTX SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device--pd "__UVISION_VERSION SETA 525" --pd "_RTE_ SETA 1" --pd "N32G45X SETA 1" --pd "N32G455 SETA 1" --pd "USE_STDPERIPH_DRIVER SETA 1"--list ..\obj\startup_n32g45x.lst --xref -o .\output\startup_n32g45x.o --depend .\output\startup_n32g45x.d)
-F (RTE\Device\N32G455REL7\system_n32g45x.c)(0x60F776BC)(--c99 -c --cpu Cortex-M4.fp -D__RTX -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\Lib\CMSIS\CM3\CoreSupport -I ..\User -I ..\Bsp -I ..\Diagnose -I ..\Formula -I ..\Proj -I ..\hardware -I .\RTE\CMSIS -I ..\utils -I ..\utils -I ..\Lib\STM32F10x_StdPeriph_Driver\inc -I ..\hardware\WKUP -I ..\GPS -I ..\GB17691 -I ..\NetManage -I ..\OBD -I ..\Lib\n32g45x_std_periph_driver\inc -I ..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x-I.\RTE\_EOBD-2G-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\dizhi\ARM\CMSIS\5.3.0\CMSIS\RTOS\RTX\INC-ID:\dizhi\Nationstech\N32G45x_DFP\1.0.1\firmware\CMSIS\device-D__UVISION_VERSION="525" -D_RTE_ -DN32G45X -DN32G455 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_CL-o .\output\system_n32g45x.o --omf_browse .\output\system_n32g45x.crf --depend .\output\system_n32g45x.d)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\core_cm4.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_version.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_compiler.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\cmsis_armcc.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\CoreSupport\mpu_armv7.h)(0x60F776BC)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\system_n32g45x.h)(0x60F776BC)
-I (D:\dizhi\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (..\Lib\CMSIS\CM3\DeviceSupport\NA\N32G45x\n32g45x_conf.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_adc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_bkp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_can.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_comp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_crc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dac.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dbg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dma.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_dvp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_eth.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_exti.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_flash.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_gpio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_i2c.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_iwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_opamp.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_pwr.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_qspi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rcc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_rtc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_sdio.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_spi.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tim.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_usart.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_wwdg.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_xfmc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\n32g45x_tsc.h)(0x60F776BC)
-I (..\Lib\n32g45x_std_periph_driver\inc\misc.h)(0x60F776BC)
